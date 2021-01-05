@@ -54,8 +54,11 @@ MySQL 是最熱門的 RDBMS 之一，許多的網站及應用程式都使用它�
 5. 更大規模的資料。如果你的資料增長到單個磁盤無法容入的大小，你應該考慮 MySQL 這類的 RDBMS，SQLite 僅支持最大 140 TB 的資料庫
 
 > [參考來源](https://medium.com/erens-tech-book/sqlite-%E8%88%87-mysql-%E7%9A%84%E5%B7%AE%E5%88%A5-a14926030ddd)
-
-## sqlite [官方網站](https://docs.python.org/3/library/sqlite3.html)
+> 
+## 參考資料
+### sqlite [官方網站](https://docs.python.org/3/library/sqlite3.html)
+### sqlite [語法參考](https://www.tutorialspoint.com/sqlite/sqlite_python.htm)
+### sqlite GUI視覺化工具 [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 
 ## 建立資料庫
 
