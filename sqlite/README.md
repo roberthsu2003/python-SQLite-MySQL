@@ -58,6 +58,7 @@ MySQL 是最熱門的 RDBMS 之一，許多的網站及應用程式都使用它�
 ## 參考資料
 ### sqlite [官方網站](https://docs.python.org/3/library/sqlite3.html)
 ### sqlite [語法參考](https://www.tutorialspoint.com/sqlite/sqlite_python.htm)
+### python和sqlite3 [範例](https://pythonexamples.org/python-sqlite3-tutorial/)
 ### sqlite GUI視覺化工具 [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 
 ## 建立資料庫
