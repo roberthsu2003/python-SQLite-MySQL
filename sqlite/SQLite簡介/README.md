@@ -37,4 +37,6 @@ SQLite 如同它名稱中的 Lite，意指它在設定、管理和所需的資�
 ### sqlite [語法參考](https://www.tutorialspoint.com/sqlite/sqlite_python.htm)
 ### python和sqlite3 [範例](https://pythonexamples.org/python-sqlite3-tutorial/)
 
+### SQLite Python [說明](https://www.sqlitetutorial.net/sqlite-python)
+
 

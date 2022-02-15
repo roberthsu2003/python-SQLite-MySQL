@@ -8,6 +8,7 @@
 	- [使用python刪除資料](./sqlite/使用python刪除資料)
 
 2. MySQL
-  - [MySQL簡介和安裝](./mySQL/mySQL簡介和安裝)
-3. [使用python連線至mySQL](./連線mySQL)
-4. [基本的]
+	- [MySQL簡介和安裝](./mySQL/mySQL簡介和安裝)
+	- [使用python連線至mySQL](./連線mySQL)
+
+3. SQLAlchemy
