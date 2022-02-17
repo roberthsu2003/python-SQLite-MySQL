@@ -835,27 +835,176 @@ ORDER BY
 
 ## INSERT操作
 
-### 插入單行資料(語法)
-
+### 插入單列資料
+#### 插入單列資料-語法
 ```
 INSERT INTO table (column1,column2 ,..)
 VALUES( value1,	value2 ,...);
 ```
 
-### 插入單行資料(範例)
+#### 插入單列資料-範例
 
 - 匯入artists.csv
 
+```
+INSERT INTO artists (name)
+VALUES('Bud Powell');
+```
 
+#### 插入單列資料查看資料
 
 ```
+SELECT
+	ArtistId,
+	Name
+FROM
+	Artists
+ORDER BY
+	ArtistId DESC
+LIMIT 1;
 ```
 
+### 插入多列資料
+#### 插入多列資料-語法
+
+```
+INSERT INTO table1 (column1,column2 ,..)
+VALUES 
+   (value1,value2 ,...),
+   (value1,value2 ,...),
+    ...
+   (value1,value2 ,...);
+```
+
+#### 插入多列資料-範例
+
+```
+INSERT INTO artists (name)
+VALUES
+	("Buddy Rich"),
+	("Candido"),
+	("Charlie Byrd");
+```
+
+#### 插入多列資料-查看資料
+
+```
+SELECT
+	ArtistId,
+	Name
+FROM
+	artists
+ORDER BY
+	ArtistId DESC
+LIMIT 3;
+```
+
+### 插入別的表格資料-例如備份表格資料
+
+#### 增加一個備份表格(範例)
+
+```
+CREATE TABLE artists_backup(
+   ArtistId INTEGER PRIMARY KEY AUTOINCREMENT,
+   Name NVARCHAR
+);
+```
+
+#### INSERT 語法內使用 SELECT語法(範例)
+
+```
+INSERT INTO artists_backup 
+SELECT ArtistId, Name
+FROM artists;
+```
+
+#### 查看備份資料(範例)
+
+```
+SELECT * FROM artists_backup;
+```
+
+---
 
 ## UPDATE操作
 
+### 語法:
+
+```
+UPDATE table
+SET column_1 = new_value_1,
+    column_2 = new_value_2
+WHERE
+    search_condition 
+ORDER column_or_expression
+LIMIT row_count OFFSET offset;
 ```
 
+#### UPDATE範例
+
+- 匯入employees.csv
+
+#### UPDATE範例(查看資料)
+
+```
+SELECT
+	employeeid,
+	firstname,
+	lastname,
+	title,
+	email
+FROM
+	employees;
+```
+
+#### UPDATE範例(更新一欄資料)
+
+```
+UPDATE employees
+SET lastname = 'Smith'
+WHERE employeeid = 3;
+```
+
+#### UPDATE範例(驗證資料)
+
+```
+SELECT
+	employeeid,
+	firstname,
+	lastname,
+	title,
+	email
+FROM
+	employees
+WHERE
+	employeeid = 3;
+```
+
+#### UPDATE範例(更新多欄資料)
+
+```
+UPDATE employees
+SET city = 'Toronto',
+    state = 'ON',
+    postalcode = 'M5P 2N7'
+WHERE
+    employeeid = 4;
+```
+
+#### UPDATE範例(驗證更新多欄資料)
+
+```
+SELECT
+	employeeid,
+	firstname,
+	lastname,
+	state,
+	city,
+	PostalCode
+FROM
+	employees
+WHERE
+	employeeid = 4;
 ```
 
 ---
