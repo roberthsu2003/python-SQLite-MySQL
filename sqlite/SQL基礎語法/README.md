@@ -1,4 +1,4 @@
-# 用DB_Browser操控sqlite
+# SQL語法
 ## 下載sqlite GUI視覺化工具 [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 ## [SQLite tutorial](https://www.sqlitetutorial.net)
 
@@ -835,8 +835,20 @@ ORDER BY
 
 ## INSERT操作
 
+### 插入單行資料(語法)
+
+```
+INSERT INTO table (column1,column2 ,..)
+VALUES( value1,	value2 ,...);
 ```
 
+### 插入單行資料(範例)
+
+- 匯入artists.csv
+
+
+
+```
 ```
 
 
