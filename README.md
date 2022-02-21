@@ -15,3 +15,9 @@
 	- [使用python連線至mySQL](./連線mySQL)
 
 4. SQLAlchemy
+
+5. 參考文件
+
+[Python資料庫介面和API的列表](https://wiki.python.org/moin/DatabaseInterfaces)
+
+[Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
