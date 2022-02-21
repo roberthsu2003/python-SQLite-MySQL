@@ -1,15 +1,3 @@
-# 使用python更新資料
-- 建立Connection物件
-- 建立Cursor物件
-- 使用UPDATE語法和?符號
-
-```sql
- UPDATE tasks SET priority = ? , begin_date = ? , end_date = ?
- WHERE id = ?
-```
-
-
-```python
 import sqlite3
 from sqlite3 import Error
 
@@ -59,6 +47,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
-
-

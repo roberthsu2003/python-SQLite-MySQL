@@ -7,6 +7,7 @@
 	- [使用python建立資料表](./sqlite/使用python建立資料表)
 	- [使用python新增資料](./sqlite/使用python新增資料)
 	- [使用python編輯資料](./sqlite/使用python編輯資料)
+	- [使用python選取資料](./sqlite/使用python選取資料)
 	- [使用python刪除資料](./sqlite/使用python刪除資料)
 
 2. MySQL
