@@ -1,15 +1,3 @@
-# 使用python刪除資料
-
-- 建立Connection物件
-- 建立Cursor物件
-- 使用DELETE語法配合符號?
-
-```
-DELETE FROM tasks WHERE id=?
-```
-
-
-```python
 import sqlite3
 from sqlite3 import Error
 
@@ -68,5 +56,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
-

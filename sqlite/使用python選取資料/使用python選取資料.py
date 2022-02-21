@@ -16,23 +16,33 @@ def create_connection(db_file):
 
     return conn
 
-def update_task(conn, task):
+def select_all_tasks(conn):
     """
+    選取task內所有的資料
     :param conn: Connection物件
-    :param task: tuple(要修改的資料)
-    :return: None
+    :return:
     """
-
-    sql = '''UPDATE task 
-             SET priority = ?,
-                 begin_date = ?,
-                 end_date = ?
-             WHERE id = ?    
-    '''
 
     cursor = conn.cursor()
-    cursor.execute(sql, task)
-    conn.commit()
+    cursor.execute("SELECT * FROM task")
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
+
+def select_task_by_priority(conn, priority):
+    """
+    選取task資料表,透過priority
+    :param conn:Connection物件
+    :param priority:數字
+    :return:
+    """
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM task WHERE priority=?", (priority,))
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
 
 
 def main():
@@ -41,7 +51,11 @@ def main():
     #建立資料庫和Connection物件
     conn = create_connection(database)
     with conn:
-        update_task(conn, (2, '2021-01-04', '2021-05-06', 2))
+        print("1.透過priority選取資料")
+        select_task_by_priority(conn, 1)
+
+        print("2.選取task資料表內的所有資料")
+        select_all_tasks(conn)
 
 
 
