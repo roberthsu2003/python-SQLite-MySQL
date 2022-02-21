@@ -14,4 +14,43 @@ PySQLite提供標準的 Python DBI API 2.0相容的介面,而目前市面上常
 
 代表我們不需要再安裝外部套件，就可以直接使用。
 
+```
+$ import sqlite3
+```
+
+## 建立資料庫，其實就是建立一個副檔名.db或是.sqlite的檔案
+- 使用sqlite3.connect()函式,建立一個Connection的物件
+- 當建立檔案時，如果沒有這個檔案將會自動建立並連線這個資料庫，有這個檔時，則是連線
+- 使用Connection的close()方法，結束連線
+
+```python
+import sqlite3
+from sqlite3 import Error
+
+def create_connection(db_file):
+    """
+    建立資料庫和連線至資料庫
+    :param db_file: 資料庫的檔案名稱
+    :return: None
+    """
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+        print(sqlite3.version)
+    except Error as e:
+        print(e)
+    finally:
+        if conn:
+            conn.close()
+
+if __name__ == "__main__":
+    create_connection('pthonsqlite.db')
+```
+
+## 如果不想建立檔案，只是暫存在記憶體內的語法
+
+```
+sqlite3.connect(':memory:')
+```
+
 
