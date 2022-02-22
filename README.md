@@ -12,6 +12,7 @@
 	- SQLite專案
 		- covid-19
 			- [練習1-選擇洲名](./sqlite/實際案例/covid-19/練習1)
+			- [練習1-巢狀選擇](./sqlite/實際案例/covid-19/練習2)
 
 3. MySQL
 	- [MySQL簡介和安裝](./mySQL/mySQL簡介和安裝)
