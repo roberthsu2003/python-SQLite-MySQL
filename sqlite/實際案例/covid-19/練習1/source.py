@@ -19,7 +19,7 @@ def __create_connection(db_file):
 
 def __select_continent(conn):
     """
-    選取task資料表,透過priority
+    選取world資料表
     :param conn:Connection物件
     :return:list
     """
