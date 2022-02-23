@@ -46,6 +46,19 @@ def __selected_country_by_continent(conn, continent):
     selected_country = [row[0] for row in rows]
     return selected_country
 
+def __selected_country_detail(conn,country_name):
+    cursor = conn.cursor()
+    sql = '''
+    SELECT 國家,日期,總確診數,新增確診數,總死亡數,新增死亡數
+    FROM world
+    WHERE 國家 = ?
+    ORDER BY 日期 DESC
+    '''
+    cursor.execute(sql, (country_name,))
+    rows = cursor.fetchall()
+    country_details = [row for row in rows]
+    return country_details
+
 def get_continent():
     database = "world.db"
     #建立資料庫和Connection物件
@@ -62,4 +75,13 @@ def get_country_by_continent(continent):
     with conn:
         countries = __selected_country_by_continent(conn,continent)
         return countries
+    return []
+
+def get_country_detailData(country):
+    database = "world.db"
+    # 建立資料庫和Connection物件
+    conn = __create_connection(database)
+    with conn:
+        country_details =  __selected_country_detail(conn, country)
+        return country_details
     return []
