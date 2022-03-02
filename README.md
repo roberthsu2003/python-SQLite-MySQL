@@ -1,5 +1,21 @@
 # python操作資料庫(SQLite和MySQL)
 1. [SQL基礎語法](./SQL基礎語法)
+	- [使用DB Browser 建立資料庫和資料表](./使用DB_Browser_建立資料庫和資料表)
+	- [建立資料表](./建立資料表)
+	- [建立Date和Time的資料欄位](./建立Date和Time的資料欄位)
+	- [PRIMARY KEY](./PRIMARY_KEY)
+	- [INSERT資料](./INSERT資料)
+	- [foreign key](./foreign_key)
+	- [SELECT資料](./SELECT資料)
+		- [ORDER BY操作](./排序資料)
+		- [WHERE操作](./WHERE操作)
+		- [LIMIT操作](./LIMIT操作)
+		- [BETWEEN操作](./BETWEEN操作)
+		- [IS NULL操作](./檢查NULL)	
+	
+	- [UPDATE資料](./UPDATE資料)
+	- [DELETE資料](./DELETE資料)
+
 2. SQLite
 	- [SQLite簡介](./sqlite/SQLite簡介)
 	- [建立新增修改刪除簡易版語法](./sqlite/建立新增修改刪除簡易版語法)
@@ -23,6 +39,6 @@
 
 5. 參考文件
 
-[Python資料庫介面和API的列表](https://wiki.python.org/moin/DatabaseInterfaces)
+	-[Python資料庫介面和API的列表](https://wiki.python.org/moin/DatabaseInterfaces)
 
-[Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
+	-[Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
