@@ -27,7 +27,6 @@ VALUES (?,?,?,?,?);
 ### lesson2.py
 
 ```python
-
 import tkinter as tk
 from tkinter import ttk
 from tkinter import font
@@ -149,8 +148,9 @@ class Window(tk.Tk):
         if not selectedIndex:
             return
         site = event.widget.get(selectedIndex)
-        siteInfo = dataSource.get_site_info(site)
-        self.tree.insert('',tk.END,values=siteInfo)
+        siteInfoes = dataSource.get_site_info(site)
+        for siteInfo in siteInfoes:
+            self.tree.insert('',tk.END,values=siteInfo)
 
 
 if __name__ == "__main__":
@@ -159,7 +159,6 @@ if __name__ == "__main__":
     window = Window(city_name_list)
     window.title("PM2.5")
     window.mainloop()
-
 
 ```
 
@@ -300,11 +299,12 @@ def get_site_info(site):
         SELECT  *
         FROM pm25
         WHERE 站點=?
-        LIMIT 1
+        ORDER BY 日期 DESC
+        LIMIT 100
         '''
     cursor = conn.cursor()
     cursor.execute(sql, (site,))
-    rows = cursor.fetchone()
+    rows = cursor.fetchall()
     return rows
 
 
@@ -314,7 +314,7 @@ def get_better():
     sql = '''
         SELECT  *
         FROM pm25
-        WHERE pm25 <= 35
+        WHERE 日期= (SELECT max(日期) FROM pm25) AND pm25 <= 35 
         '''
     cursor = conn.cursor()
     cursor.execute(sql)
@@ -327,7 +327,7 @@ def get_normal():
     sql = '''
         SELECT  *
         FROM pm25
-        WHERE pm25 BETWEEN 35 AND 53
+        WHERE (pm25 BETWEEN 35 AND 53) AND (SELECT max(日期) FROM pm25)
         '''
     cursor = conn.cursor()
     cursor.execute(sql)
@@ -340,7 +340,7 @@ def get_bad():
     sql = '''
             SELECT  *
             FROM pm25
-            WHERE pm25 > 53
+            WHERE pm25 > 53 AND (SELECT max(日期) FROM pm25)
             '''
     cursor = conn.cursor()
     cursor.execute(sql)
