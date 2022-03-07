@@ -119,8 +119,9 @@ class Window(tk.Tk):
         if not selectedIndex:
             return
         site = event.widget.get(selectedIndex)
-        siteInfo = dataSource.get_site_info(site)
-        self.tree.insert('',tk.END,values=siteInfo)
+        siteInfoes = dataSource.get_site_info(site)
+        for siteInfo in siteInfoes:
+            self.tree.insert('',tk.END,values=siteInfo)
 
 
 if __name__ == "__main__":
