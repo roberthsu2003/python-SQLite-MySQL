@@ -31,11 +31,12 @@ def create_table_pm25(conn):
     sql = ''' 
     CREATE TABLE IF NOT EXISTS pm25 (
 	id INTEGER PRIMARY KEY,
-	站點 TEXT,
-	城市 TEXT,
+	站點 TEXT NOT NULL,
+	城市 TEXT NOT NULL,
 	pm25 REAL,
-	日期 TEXT,
-	單位 TEXT
+	日期 TEXT NOT NULL,
+	單位 TEXT,
+	UNIQUE (站點,日期)
     );
     '''
     cursor = conn.cursor()
@@ -50,7 +51,7 @@ def insert_pm25(conn, values):
     :return:自動建立id的最後一筆
     """
     sql = ''' 
-    INSERT INTO pm25 (站點,城市,pm25,日期,單位)
+    INSERT OR REPLACE INTO pm25 (站點,城市,pm25,日期,單位)
     VALUES (?,?,?,?,?)
     '''
     cursor = conn.cursor()
@@ -69,7 +70,6 @@ def saveToDataBase(datas):
     conn = create_connection('pm25.db')
     print("資料庫連線成功")
     with conn:
-        delete_table_pm25(conn) #刪除資料表
         create_table_pm25(conn) #建立資料表
         for value in datas:
             insert_pm25(conn, value) #插入資料
