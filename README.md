@@ -34,8 +34,15 @@
 			- [練習1-只收集最新資料](./sqlite/實際案例/台灣即時pm25/練習1)
 			- [練習2-持續收集資料](./sqlite/實際案例/台灣即時pm25/練習2)
 3. MySQL
-	- [MySQL簡介和安裝](./mySQL/mySQL簡介和安裝)
-	- [使用python連線至mySQL](./連線mySQL)
+	- [MySQL簡介](./mySQL/mySQL簡介和安裝)
+	- [免費版MySQL安裝](./mySQL/安裝mySQL)
+	- [使用python連線至mySQL](./mySQL/連線mySQL)
+	- [使用python建立資料表](./mySQL/使用python建立資料表)
+	- [使用python新增資料](./mySQL/使用python新增資料)
+	- [使用python編輯資料](./sqlite/使用python編輯資料)
+	- [使用python選取資料](./sqlite/使用python選取資料)
+	- [使用python刪除資料](./sqlite/使用python刪除資料)
+	- mySQL專案
 
 4. SQLAlchemy
 
