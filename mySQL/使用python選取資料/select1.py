@@ -1,6 +1,3 @@
-# 使用python選取資料
-
-```python
 import pymysql.cursors
 from pymysql import Error
 
@@ -44,4 +41,4 @@ if __name__ == "__main__":
             print("2.選取task資料表內的所有資料")
             select_all_tasks(conn)
 
-```
+

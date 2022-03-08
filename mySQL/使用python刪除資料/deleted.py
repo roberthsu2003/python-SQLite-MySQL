@@ -14,15 +14,22 @@ def create_connection():
         print(e)
     return connection
 
-def select_all_task(conn):
-    pass
+def delete_task(conn, id):
+    sql = 'DELETE FROM task WHERE id=%s'
+    with conn.cursor() as cursor:
+        cursor.execute(sql,(id,))
+    conn.commit()
 
-
+def delete_all_task(conn):
+    sql = 'DELETE FROM task'
+    with conn.cursor() as cursor:
+        cursor.execute(sql)
+    conn.commit()
 
 
 if __name__ == "__main__":
     conn = create_connection()
     if conn is not None:
         with conn:
-            pass
+            delete_task(conn, 2)
 
