@@ -41,9 +41,9 @@
 	- [PyMySql連線至mySQL Server](./mySQL/PyMySql連線mySQLServer)
 	- [使用python建立資料表](./mySQL/使用python建立資料表)
 	- [使用python新增資料](./mySQL/使用python新增資料)
-	- [使用python編輯資料](./sqlite/使用python編輯資料)
-	- [使用python選取資料](./sqlite/使用python選取資料)
-	- [使用python刪除資料](./sqlite/使用python刪除資料)
+	- [使用python編輯資料](./mySQL/使用python編輯資料)
+	- [使用python選取資料](./mySQL/使用python選取資料)
+	- [使用python刪除資料](./mySQL/使用python刪除資料)
 	- mySQL專案
 
 4. SQLAlchemy
