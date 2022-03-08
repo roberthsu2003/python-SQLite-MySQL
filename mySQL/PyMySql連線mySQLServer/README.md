@@ -8,3 +8,21 @@
 $ pip install PyMySQL
 ```
 
+## 連線mySQLServer
+
+- 使用Sequel Pro的 Database -> View UsingEncoding檢查編碼
+
+![](./images/pic1.png)
+
+
+```python
+import pymysql.cursors
+connection = pymysql.connect(host='localhost',
+                             user='root',
+                             password='1234',
+                             database='world',
+                             charset='utf8mb4',                             cursorclass=pymysql.cursors.DictCursor)
+with connection:
+    print(connection)
+    print("連線成功")
+```

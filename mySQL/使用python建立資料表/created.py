@@ -1,6 +1,3 @@
-# 使用python建立資料表
-
-```python
 import pymysql.cursors
 from pymysql import Error
 
@@ -53,7 +50,6 @@ if __name__ == "__main__":
 
     else:
         print("無法建立資料連線")
-```
 
 
 
