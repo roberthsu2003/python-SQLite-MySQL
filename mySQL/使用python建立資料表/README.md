@@ -1,5 +1,7 @@
 # 使用python建立資料表
 
+![](./images/pic1.png)
+
 ```python
 import pymysql.cursors
 from pymysql import Error
@@ -23,9 +25,10 @@ def create_table(conn,create_table_sql):
     conn.commit()
 
 if __name__ == "__main__":
+    #MYSQL AUTO_INCREMENT要有
     sql_create_projects_table = """
             CREATE TABLE IF NOT EXISTS projects(
-    		id integer PRIMARY KEY,
+    		id integer PRIMARY KEY AUTO_INCREMENT,
     		name text NOT NULL,
     		begin_date text,
     		end_date text
@@ -34,11 +37,12 @@ if __name__ == "__main__":
 
     sql_create_tasks_table = """
         CREATE TABLE IF NOT EXISTS task(
-    	id integer PRIMARY KEY,
+    	id integer PRIMARY KEY AUTO_INCREMENT,
     	name text NOT NULL,
     	priority integer,
     	project_id integer NOT NULL,
     	status_id integer NOT NULL,
+    	begin_date text NOT NULL,
     	end_date text NOT NULL,
     	FOREIGN KEY(project_id) REFERENCES projects(id)
         );
@@ -53,6 +57,7 @@ if __name__ == "__main__":
 
     else:
         print("無法建立資料連線")
+
 ```
 
 

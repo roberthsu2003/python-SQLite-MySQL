@@ -1,16 +1,3 @@
-# 使用python新增資料
-
-- 連線至資料庫
-- 使用Connection物件建立Cursor物件
-- 使用INSERT語法並配合%s符號,插入資料
-
-```python
- INSERT INTO projects(name,begin_date,end_date) VALUES(%s,%s,%s)
-```
-
-![](./images/pic1.png)
-
-```python
 import pymysql.cursors
 from pymysql import Error
 
@@ -61,5 +48,3 @@ if __name__ == "__main__":
             insert_task(conn, task_1)
             insert_task(conn, task_2)
 
-
-```
