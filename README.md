@@ -45,6 +45,8 @@
 	- [使用python選取資料](./mySQL/使用python選取資料)
 	- [使用python刪除資料](./mySQL/使用python刪除資料)
 	- mySQL專案
+		- 台北市youbike及時資訊
+			- [練習1-匯入資料至資料庫](./mySQL/實際案例/台北市youbike及時資訊/匯入資料至資料庫/)
 
 4. SQLAlchemy
 
