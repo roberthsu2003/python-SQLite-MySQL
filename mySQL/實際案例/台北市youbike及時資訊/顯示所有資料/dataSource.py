@@ -75,6 +75,18 @@ def update_data(downloadData):
                 cursor.execute(replace_into_sql,(sno,sna,tot,sbi,sarea,mday,lat,lng,ar,bemp,act))
             conn.commit()
 
+def get_siteInfo():
+    conn = create_connection()
+    select_sql = '''
+    select * from youbike
+    '''
+    with conn:
+        with conn.cursor() as cursor:
+            cursor.execute(select_sql)
+            rows = cursor.fetchall()
+
+    return rows
+
 
 
 
