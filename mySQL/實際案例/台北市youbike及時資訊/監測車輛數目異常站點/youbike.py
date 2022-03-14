@@ -36,7 +36,8 @@ class LeftLabelFrame(tk.LabelFrame):
 
         normal_list = dataSource.get_list_of_normal()
         for item in normal_list:
-            treeView.insert('', 'end', values=item)
+            itemList = list(item.values())
+            treeView.insert('', 'end', values=itemList)
 
 
 
@@ -44,8 +45,8 @@ class CenterLabelFrame(tk.LabelFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         topFrame = tk.Frame(self, background='gray')
-        tk.Label(topFrame, text="正常租借站點", font=("arial", 20), background='gray', fg="white").pack(padx=10, pady=10)
-        normal_count = dataSource.get_count_of_normal()
+        tk.Label(topFrame, text="可租用少於3台", font=("arial", 20), background='gray', fg="white").pack(padx=10, pady=10)
+        normal_count = dataSource.get_count_of_less_bike()
         tk.Label(topFrame, text=f"數量:{normal_count}", background='gray', fg='#ffffff', font=("arial", 20)).pack(padx=10,
                                                                                                                 pady=10)
         topFrame.pack(pady=20)
@@ -61,16 +62,17 @@ class CenterLabelFrame(tk.LabelFrame):
         treeView.column('bemp', width=50)
         treeView.pack()
 
-        normal_list = dataSource.get_list_of_normal()
+        normal_list = dataSource.get_list_of_less_bike()
         for item in normal_list:
-            treeView.insert('', 'end', values=item)
+            itemList = list(item.values())
+            treeView.insert('', 'end', values=itemList)
 
 class RightLabelFrame(tk.LabelFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         topFrame = tk.Frame(self, background='gray')
-        tk.Label(topFrame, text="正常租借站點", font=("arial", 20), background='gray', fg="white").pack(padx=10, pady=10)
-        normal_count = dataSource.get_count_of_normal()
+        tk.Label(topFrame, text="可還車量少於3台", font=("arial", 20), background='gray', fg="white").pack(padx=10, pady=10)
+        normal_count = dataSource.get_count_of_less_stop()
         tk.Label(topFrame, text=f"數量:{normal_count}", background='gray', fg='#ffffff', font=("arial", 20)).pack(padx=10,
                                                                                                                 pady=10)
         topFrame.pack(pady=20)
@@ -86,9 +88,10 @@ class RightLabelFrame(tk.LabelFrame):
         treeView.column('bemp', width=50)
         treeView.pack()
 
-        normal_list = dataSource.get_list_of_normal()
+        normal_list = dataSource.get_list_of_less_stop()
         for item in normal_list:
-            treeView.insert('', 'end', values=item)
+            itemList = list(item.values())
+            treeView.insert('', 'end', values=itemList)
 
 if __name__=="__main__":
     dataSource.update_youbike_data()
