@@ -15,6 +15,9 @@
 		- [IS NULL操作](./SQL基礎語法/檢查NULL)		
 	- [UPDATE資料](./SQL基礎語法/UPDATE資料)
 	- [DELETE資料](./SQL基礎語法/DELETE資料)
+	- [JOIN](./SQL基礎語法/JOIN)
+	- [INNER JOIN](./SQL基礎語法/INNER_JOIN)
+	- [LEFT JOIN](./SQL基礎語法/LEFT_JOIN)
 
 2. SQLite
   - [SQLite範例db](./sqlite/sqlite_sample_db)
