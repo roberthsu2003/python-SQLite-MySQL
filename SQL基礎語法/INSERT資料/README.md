@@ -1,18 +1,24 @@
-## insert 操作
+## join 操作
+
+- 多個資料表的連結查詢
+- albums的ArtistId有多個相同的id
+- artists的ArtistId沒有重覆
 
 ![](./images/pic1.png)
 
+
 ### 語法:
 ```
-INSERT INTO table1 (column1,column2 ,..)
-VALUES 
-   (value1,value2 ,...),
-   (value1,value2 ,...),
-    ...
-   (value1,value2 ,...);
+SELECT 
+    Title,
+    Name
+FROM 
+    albums
+INNER JOIN artists 
+    ON artists.ArtistId = albums.ArtistId;
 ```
 
-### 新增一筆資料
+### 使用
 
 - 匯入artists.csv
 
