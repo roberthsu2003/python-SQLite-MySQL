@@ -46,17 +46,28 @@ CREATE TABLE table(
 
 ### 範例:
 
-```
+```sql
 CREATE TABLE countries (
    country_id INTEGER PRIMARY KEY,
    name TEXT NOT NULL
 );
 ```
 
+```sql
+INSERT INTO countries (name)
+VALUSE('台灣')
 ```
+
+```sql
 CREATE TABLE languages (
    language_id INTEGER,
    name TEXT NOT NULL,
    PRIMARY KEY (language_id)
 );
+```
+
+```sql
+INSERT INTO languages (name)
+VALUSE('繁體中文');
+
 ```
