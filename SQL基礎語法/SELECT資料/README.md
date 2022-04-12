@@ -3,7 +3,7 @@
 ### 語法:
 
 ```
-SELECT DISTINCT column_list
+SELECT [DISTINCT] column_list
 FROM table_list
 ```
 
@@ -11,7 +11,15 @@ FROM table_list
 
 - 匯入tracks.csv
 
-![](./images/pic2.png)
+![](pic2.png)
+
+### 所有欄位
+
+```
+SELECT * FROM tracks;
+```
+
+### 指定欄位
 
 ```
 SELECT
@@ -23,7 +31,5 @@ FROM
 	tracks;
 ```
 
-```
-SELECT * FROM tracks;
-```
+
 

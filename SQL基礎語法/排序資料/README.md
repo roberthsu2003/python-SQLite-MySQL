@@ -27,6 +27,9 @@ ORDER BY
 	albumid ASC;
 ```
 
+- ASC 由小到大排序
+- DESC 由大到小排序
+
 ```
 SELECT
 	name,
