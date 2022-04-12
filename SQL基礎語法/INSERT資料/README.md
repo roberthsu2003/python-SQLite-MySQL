@@ -15,6 +15,8 @@ VALUES( value1,	value2 ,...);
 
 - 匯入artists.csv
 
+### 新增一筆資料
+
 ```
 INSERT INTO artists (name)
 VALUES('Bud Powell');
