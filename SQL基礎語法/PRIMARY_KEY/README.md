@@ -55,7 +55,7 @@ CREATE TABLE countries (
 
 ```sql
 INSERT INTO countries (name)
-VALUSE('台灣')
+VALUES('台灣')
 ```
 
 ```sql
@@ -68,6 +68,6 @@ CREATE TABLE languages (
 
 ```sql
 INSERT INTO languages (name)
-VALUSE('繁體中文');
+VALUES('繁體中文');
 
 ```
