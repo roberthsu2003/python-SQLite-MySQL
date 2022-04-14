@@ -2,6 +2,18 @@
 
 - 匯入employees.csv
 
+#### 語法
+
+```
+UPDATE table
+SET column_1 = new_value_1,
+    column_2 = new_value_2
+WHERE
+    search_condition 
+ORDER column_or_expression
+LIMIT row_count OFFSET offset;
+```
+
 #### UPDATE範例(查看資料)
 
 ```
