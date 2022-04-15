@@ -39,7 +39,7 @@ SELECT column_1
 
 #### subquery使用在WHERE-範例1
 
-- 搜尋專輯歌區(albumid)內的title為'Let There Be Rock'的樂團資訊 
+- 搜尋專輯歌區(albumid)內的title為'Let There Be Rock'的歌區資訊 
 ![](./pic1.png)
 
 - 先取得albums資料表內,title為'Let There Be Rock'的albumid
