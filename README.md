@@ -5,8 +5,7 @@
 	- [建立資料表](./SQL基礎語法/建立資料表)
 	- [建立Date和Time的資料欄位](./SQL基礎語法/建立Date和Time的資料欄位)
 	- [PRIMARY KEY](./SQL基礎語法/PRIMARY_KEY)
-	- [INSERT資料](./SQL基礎語法/INSERT資料)
-	- [foreign key](./SQL基礎語法/foreign_key)
+	- [INSERT資料](./SQL基礎語法/INSERT資料)	- 
 	- [SELECT資料](./SQL基礎語法/SELECT資料)
 		- [ORDER BY操作](./SQL基礎語法/排序資料)
 		- [WHERE操作](./SQL基礎語法/WHERE操作)
@@ -16,9 +15,11 @@
 	- [UPDATE資料](./SQL基礎語法/UPDATE資料)
 	- [DELETE資料](./SQL基礎語法/DELETE資料)
 	- [REPLACE資料](./SQL基礎語法/REPLACE資料)
+	- [subquery](./SQL基礎語法/subquery資料)
 	- [JOIN](./SQL基礎語法/JOIN)
 	- [INNER JOIN](./SQL基礎語法/INNER_JOIN)
 	- [LEFT JOIN](./SQL基礎語法/LEFT_JOIN)
+	- [foreign key](./SQL基礎語法/foreign_key)
 
 2. SQLite
   - [SQLite範例db](./sqlite/sqlite_sample_db)
