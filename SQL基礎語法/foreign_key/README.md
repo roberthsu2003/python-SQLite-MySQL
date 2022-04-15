@@ -20,6 +20,8 @@ PRAGMA foreign_keys = OFF;
 
 - suppliers內的group_id要對應到supplier_groups的group_id
 - 目前沒有foreign key的限制, 所以2個欄位的值沒有任何的限制
+- 現在無法預防建立suppliers資料,欄位group_id的值是supplier_groups內有提供
+- 現在無法限制當supplier_groups內的值被刪除或更改時,suppliers內的group_id要如何處理
 
 ```
 CREATE TABLE suppliers (
@@ -37,6 +39,8 @@ CREATE TABLE supplier_groups (
 ### 使用foreign key限制2個欄位是有關係的
 
 - sqlite建立表格後，無法再建立foreign key
+- 建立限制後,無法在child key增加沒有parent key存在的值
+- 建立限制後,無法刪除parent key(當child key內有此parent key的值)
 
 ![](./images/pic3.png)
 
