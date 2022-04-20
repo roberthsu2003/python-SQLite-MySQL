@@ -32,7 +32,7 @@
 	- [使用python選取資料](./sqlite/使用python選取資料)
 	- [使用python刪除資料](./sqlite/使用python刪除資料)
 	- SQLite專案
-		- covid-19
+		- covid-19 [下載位置](https://covid-19.nchc.org.tw/dt_owl.php?dt_name=3)
 			- [練習1-選擇洲名](./sqlite/實際案例/covid-19/練習1)
 			- [練習2-巢狀選擇](./sqlite/實際案例/covid-19/練習2)
 			- [練習3-顯示國家](./sqlite/實際案例/covid-19/練習3)
