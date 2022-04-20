@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS projects(
 );
 ```
 
-## 建立tasts資料表的SQL語法
+## 建立tasks資料表的SQL語法
 
 ```sql
 CREATE TABLE IF NOT EXISTS task(
