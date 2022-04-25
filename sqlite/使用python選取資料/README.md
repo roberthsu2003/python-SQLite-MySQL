@@ -11,65 +11,74 @@ import sqlite3
 from sqlite3 import Error
 
 def create_connection(db_file):
-    """
-    建立資料庫和連線至資料庫
-    :param db_file: 資料庫的檔案名稱
-    :return: Connection物件
-    """
     conn = None
     try:
         conn = sqlite3.connect(db_file)
-        print(sqlite3.version)
     except Error as e:
         print(e)
 
     return conn
 
 def select_all_tasks(conn):
-    """
-    選取task內所有的資料
-    :param conn: Connection物件
-    :return:
-    """
 
+    sql = "SELECT * FROM task"
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM task")
+    cursor.execute(sql)
     rows = cursor.fetchall()
-
-    for row in rows:
-        print(row)
+    return rows
 
 def select_task_by_priority(conn, priority):
-    """
-    選取task資料表,透過priority
-    :param conn:Connection物件
-    :param priority:數字
-    :return:
+
+    cursor = conn.cursor()
+    sql = "SELECT * FROM task WHERE priority=?"
+    cursor.execute(sql , (priority,))
+    rows = cursor.fetchall()
+    return rows
+
+def select_all_using_subquery(conn,task_name):
+    sql = """
+    SELECT projects.name as projectName,
+				projects.begin_date as projectBegin,
+				projects.end_date as projectEnd,
+				task.name as taskName				
+                FROM task,projects
+                WHERE projects.id = (
+									SELECT project_id
+									FROM task
+									WHERE task.name = ?
+                                    )
     """
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM task WHERE priority=?", (priority,))
+    cursor.execute(sql, (task_name,))
     rows = cursor.fetchall()
+    return rows
 
-    for row in rows:
-        print(row)
-
-
-def main():
-    database = "pythonsqlite.db"
-
-    #建立資料庫和Connection物件
-    conn = create_connection(database)
-    with conn:
-        print("1.透過priority選取資料")
-        select_task_by_priority(conn, 1)
-
-        print("2.選取task資料表內的所有資料")
-        select_all_tasks(conn)
-
-
+def select_all_using_innerJoin(conn,task_name):
+    sql = """
+    SELECT projects.name as projectName,
+				projects.begin_date as projectBegin,
+				projects.end_date as projectEnd,
+				task.name as taskName				
+    FROM projects INNER JOIN task on projects.id = task.project_id
+    WHERE task.name = ?
+    """
+    cursor = conn.cursor()
+    cursor.execute(sql, (task_name,))
+    rows = cursor.fetchall()
+    return rows
 
 if __name__ == "__main__":
-    main()
+    conn = create_connection('phtonsqlite.db')
+    if conn is not None:
+        with conn:
+            rows1 = select_all_tasks(conn)
+            rows2 = select_task_by_priority(conn,1)
+            rows3 = select_all_using_subquery(conn,'我的任務1')
+            rows4 = select_all_using_innerJoin(conn, '我的任務1')
+            print(rows4)
+
+
+
 ```
 
 
