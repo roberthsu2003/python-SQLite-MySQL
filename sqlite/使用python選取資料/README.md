@@ -76,9 +76,6 @@ if __name__ == "__main__":
             rows3 = select_all_using_subquery(conn,'我的任務1')
             rows4 = select_all_using_innerJoin(conn, '我的任務1')
             print(rows4)
-
-
-
 ```
 
 
