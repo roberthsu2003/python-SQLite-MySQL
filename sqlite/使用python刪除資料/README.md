@@ -41,9 +41,5 @@ if __name__ == "__main__":
         with conn:
             delete_task(conn, 1)
 
-
-
-
-
 ```
 
