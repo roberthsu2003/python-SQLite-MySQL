@@ -2,6 +2,10 @@
 
 ![](./images/pic1.png)
 
+```
+$ pip install pandas-datareader
+```
+
 ### 主程式.py
 
 ```python
