@@ -276,7 +276,7 @@ def get_count_of_normal():
     sql = '''
     SELECT count(*) as 正常數量
     FROM youbike
-    WHERE act = 1 AND sbi > 3 AND bemp >3
+    WHERE act = 1 AND sbi > 3介面和資料整合 AND bemp >3介面和資料整合
     '''
     with conn:
         with conn.cursor() as cursor:
@@ -293,7 +293,7 @@ def get_list_of_normal():
     sql = '''
         SELECT sna,tot,sbi,bemp
         FROM youbike
-        WHERE act = 1 AND sbi > 3 AND bemp >3
+        WHERE act = 1 AND sbi > 3介面和資料整合 AND bemp >3介面和資料整合
         '''
     with conn:
         with conn.cursor() as cursor:
@@ -310,7 +310,7 @@ def get_count_of_less_bike():
     sql = '''
     SELECT count(*) as 正常數量
     FROM youbike
-    WHERE act = 1 AND sbi <= 3 
+    WHERE act = 1 AND sbi <= 3介面和資料整合 
     '''
     with conn:
         with conn.cursor() as cursor:
@@ -327,7 +327,7 @@ def get_list_of_less_bike():
     sql = '''
         SELECT sna,tot,sbi,bemp
         FROM youbike
-        WHERE act = 1 AND sbi <= 3
+        WHERE act = 1 AND sbi <= 3介面和資料整合
         '''
     with conn:
         with conn.cursor() as cursor:
@@ -344,7 +344,7 @@ def get_count_of_less_stop():
     sql = '''
     SELECT count(*) as 正常數量
     FROM youbike
-    WHERE act = 1 AND bemp <= 3 
+    WHERE act = 1 AND bemp <= 3介面和資料整合 
     '''
     with conn:
         with conn.cursor() as cursor:
@@ -361,7 +361,7 @@ def get_list_of_less_stop():
     sql = '''
         SELECT sna,tot,sbi,bemp
         FROM youbike
-        WHERE act = 1 AND bemp <= 3
+        WHERE act = 1 AND bemp <= 3介面和資料整合
         '''
     with conn:
         with conn.cursor() as cursor:
