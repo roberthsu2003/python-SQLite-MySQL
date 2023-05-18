@@ -53,6 +53,7 @@
 	- [範例用db](./mySQL/mysql範例db)
 	- [MySQL簡介](./mySQL/mySQL簡介)
 	- [MySQL資料類型](https://tsuozoe.pixnet.net/blog/post/21289210)
+	- [免費試用雲端MySQLServer](.mySQL/免費試用雲端MySQLServer)
 	- [免費版MySQL安裝](./mySQL/安裝mySQL)
 	- [PyMySql連線至mySQL Server](./mySQL/PyMySql連線mySQLServer)
 	- [使用python建立資料表](./mySQL/使用python建立資料表)
