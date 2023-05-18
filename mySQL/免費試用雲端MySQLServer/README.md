@@ -1,12 +1,14 @@
-# 請請免費帳號
+# 申請免費帳號
 https://www.freesqldatabase.com
 
 ## 收到email
+```
 Host: xxxxxxx.com
 Database name: xxxxx4
 Database user: xxxxxx4
 Database password: xxxxxxx5
 Port number: 3306
+```
 
 ## 使用線上版phpMyAdmin連線
 
