@@ -1,9 +1,10 @@
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "artists" (
-	"ArtistId"	INTEGER,
+	"ArtistId"	INTEGER PRIMARY KEY AUTOINCREMENT,	
 	"Name"	TEXT
+	"lastName" TEXT default 'robert'
 );
-INSERT INTO "artists" VALUES (1,'AC/DC');
+INSERT INTO artists() VALUES (1,'AC/DC');
 INSERT INTO "artists" VALUES (2,'Accept');
 INSERT INTO "artists" VALUES (3,'Aerosmith');
 INSERT INTO "artists" VALUES (4,'Alanis Morissette');
