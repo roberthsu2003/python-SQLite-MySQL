@@ -13,7 +13,7 @@ def create_connection():
     try:
         connection = psycopg2.connect(host='dpg-cl3jvnhnovjs73bitii0-a.singapore-postgres.render.com',
                                      user='roberthsu',
-                                     password='0IKBERnnSpOtM4SbqyVIWjtKIuqY4BSZ',
+                                     password='',
                                      database='testdb_ct3o',
                                      port="5432"
                                      )
