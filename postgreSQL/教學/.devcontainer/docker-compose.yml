@@ -40,8 +40,8 @@ services:
 
 
 
-#volumes:
-  #postgres-data:
+volumes:
+  postgres-data:
 
 
 
