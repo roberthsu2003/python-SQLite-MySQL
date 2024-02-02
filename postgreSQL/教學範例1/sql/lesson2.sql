@@ -30,8 +30,24 @@ DESCRIBE student;
 /*刪除表格
 DROP TABLE student;
 
-//修改表格
+//修改表格-> 增加欄位
 ALTER TABLE student ADD gpa numeric(3,2)
+
+
+//修改表格 -> 刪除欄位
+ALTER TABLE student DROP gpa
+
+
+/*建立表格 primary key的另一種寫法*/
+CREATE TABLE student(
+	student_id UUID,
+	name VARCHAR(20),
+	major VARCHAR(20),
+	PRIMARY KEY(student_id)
+);
+
+
+
 
 
 
