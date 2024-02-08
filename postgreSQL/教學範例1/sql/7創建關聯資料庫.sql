@@ -28,9 +28,7 @@ CREATE TABLE branch(
 
 /*補上employee少設的2個Foreign key*/
 ALTER TABLE employee
-ADD FOREIGN KEY(branch_id)
-REFERENCES branch(branch_id)
-ON DELETE SET NULL;
+ADD FOREIGN KEY(branch_id) REFERENCES branch(branch_id) ON DELETE SET NULL;
 
 ALTER TABLE employee
 ADD FOREIGN KEY(sup_id)
