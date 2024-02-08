@@ -28,8 +28,15 @@ ADD FOREIGN KEY(branch_id) REFERENCES branch(branch_id) ON DELETE SET NULL;
 DELETE FROM employee
 WHERE name = '小綠';
 
+/*小綠被刪除,行政部門主管應為NULL*/
 SELECT *
 FROM branch;
+
+/*小綠被刪除,works_with,小綠(emp_id=207),這筆會被刪除*/
+SELECT *
+FROM works_with
+
+
 
 
 
