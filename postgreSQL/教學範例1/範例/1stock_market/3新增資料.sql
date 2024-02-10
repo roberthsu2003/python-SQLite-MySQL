@@ -1,0 +1,6 @@
+INSERT INTO 市場 values ('^TWII','台灣')
+ON CONFLICT DO NOTHING;
+
+SELECT * FROM 市場
+
+
