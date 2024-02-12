@@ -19,7 +19,8 @@
 	// This can be used to network with other containers or the host.
 	"forwardPorts": [
 		5000,
-		5432
+		5432,
+		8501
 	],
 	"customizations": {
 		"vscode": {
