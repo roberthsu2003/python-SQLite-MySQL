@@ -1,4 +1,11 @@
-## PostgresSQL
+## PostgreSQL
+
+### 文件參考
+- [postgresql官方說明](https://www.postgresql.org/docs/current/)
+- [postgresql-tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/)
+- [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
+
+### PostgreSQL SQL語法
 
 - [建立資料庫](./sql/1建立資料庫.sql)
 - [建立資料表](./sql/2建立資料表.sql)
