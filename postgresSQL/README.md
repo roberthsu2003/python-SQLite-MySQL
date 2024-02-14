@@ -2,7 +2,7 @@
 
 ### 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
-- [postgresql-tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/)
+- [postgresql-tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/)
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
 ### PostgreSQL SQL語法
