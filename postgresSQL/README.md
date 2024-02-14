@@ -1,5 +1,8 @@
 ## PostgreSQL
 
+### 安裝管理套件(pgAdmin4)
+- [下載官網](https://www.pgadmin.org)
+
 ### 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
 - [postgresql-tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/)
