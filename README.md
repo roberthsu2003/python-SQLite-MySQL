@@ -75,7 +75,7 @@
 
 4. [SQLAlchemy](./sqlAlchemy)
 
-5. [postgreSQL](./postgreSQL/) [尚未完成]
+5. [postgreSQL](./postgresSQL)
 	
 6. 參考文件
 
