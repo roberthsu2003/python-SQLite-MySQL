@@ -21,7 +21,7 @@
 - [聯集](./sql/12聯集.sql)
 - [連結](./sql/13連結.sql)
 - [子查詢](./sql/14子查詢.sql)
-- [on delete action](./sql/on_delete_action.sql) 
+- [on delete action](./sql/15on_delete_action.sql) 
 
 
 ### 實際案例
