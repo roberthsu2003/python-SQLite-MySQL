@@ -21,5 +21,15 @@ FROM 股市
 SELECT MIN(date)
 FROM 股市
 
+/*取出最大和最小日期*/
+SELECT MAX(date),MIN(date)
+FROM 股市
+
+
+/*取出一段時間的日期*/
+SELECT date,adj_close,volume,股市.name,country
+FROM 股市 JOIN 市場 ON 股市.name = 市場.name
+WHERE 市場.country in('台灣','香港恒生') AND (股市.date BETWEEN '2024-01-01' AND '2024-12-31')
+
 
 
