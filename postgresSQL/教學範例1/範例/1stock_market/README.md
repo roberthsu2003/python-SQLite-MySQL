@@ -11,6 +11,7 @@ yfinance
 streamlit
 ```
 
+
 ### 資料結構(股市.jam)
 
 ![](./images/pic1.png)
@@ -29,3 +30,15 @@ streamlit
 2. [lesson2_建立資料表](./lesson2_建立資料表.ipynb)
 3. [lesson3_新增資料](./lesson3_新增資料.ipynb)
 4. [lesson4_取出資料](./lesson4_取出資料.ipynb)
+
+### main.py(只有股市)
+[main.py](./main.py)
+
+![](./images/pic3.png)
+
+### main1.py(股市和日期範圍)
+[main1.py](./main1.py)
+![](./images/pic2.png)
+
+
+
