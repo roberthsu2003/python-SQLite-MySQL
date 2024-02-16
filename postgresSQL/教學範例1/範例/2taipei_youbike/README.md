@@ -18,7 +18,9 @@
 - [插入多筆資料](./4insert_multiple_data.ipynb)
 - [取出資料](5取出資料.ipynb)
 
-### 簡易顯示[main.py](./main.py)
+### 簡易顯示main.py
+
+#### [main.py](./main.py)
 
 ![](./images/pic2.png)
 
