@@ -29,5 +29,4 @@
 
 ### 實際案例(教學範例1內有.devcontainer)
 - [大盤股市_streamlit](./教學範例1/範例/1stock_market)
-
-- [台北市youbike及時資訊_tkinter](./實際案例/台北市youbike及時資訊_tkinter)
+- [台北市youbike_streamlit](./教學範例1/範例/2taipei_youbike)
