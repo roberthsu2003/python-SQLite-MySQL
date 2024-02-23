@@ -8,3 +8,5 @@
 
 ### 下載DVD Rental Database(postgreSQL)
 - [下載位址](./dvd_rental_database/)
+
+> 出處:https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
