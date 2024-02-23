@@ -7,4 +7,4 @@
 ![](./images/dvd-rental-sample-database-diagram.png)
 
 ### 下載DVD Rental Database(postgreSQL)
-- [下載位址](./dvd_rental_database)
+- [下載位址](./dvd_rental_database/)
