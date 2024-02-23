@@ -8,6 +8,8 @@
 - [postgresql-tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/)
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
+### [範例資料庫下載](./範例資料庫)
+
 ### PostgreSQL SQL語法
 
 - [建立資料庫](./sql/1建立資料庫.sql)
