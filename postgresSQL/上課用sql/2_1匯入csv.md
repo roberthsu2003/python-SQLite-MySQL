@@ -1,10 +1,10 @@
-## 匯入CSV - 使用sqlite建立的城市.sql
+## 1. 匯入CSV - 使用sqlite建立的城市.sql
 - 將(城市.csv)透過DB browser匯入
 - 透過DB browser匯出(城市.sql)
 - [城市.sql檔案下載](./其它範例csv/city.sql)
 - 使用pdAdmin4開啟城市.sql,並執行城市.sql
 
-## 匯入目前天氣.CSV
+## 2. 匯入目前天氣.CSV
 
 - [目前天氣.csv下載](./其它範例csv/目前天氣.sql)
 - 建立目前天氣資料表,如下面SQL:
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS 目前天氣(
 
 ![](./images/pic3.png)
 
-## 匯入DVD租賃店專案資料庫
+## 3. 匯入DVD租賃店專案資料庫
 
 ### DVD Rental DataBase資料架構
 
