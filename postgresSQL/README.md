@@ -12,10 +12,11 @@
 
 ### [使用範例資料庫(dvd_rental_database)練習](./練習)
 
-### PostgreSQL SQL語法
+### PostgreSQL SQL語法(上課用)
 
 - [建立資料庫](./上課用sql/1建立資料庫.sql)
 - [建立資料表](./上課用sql/2建立資料表.sql)
+- [將csv匯入資料表](./上課用sql/2_1匯入csv.md)
 - [新增資料](./上課用sql/3新增資料.sql)
 - [限制](./上課用sql/4限制.sql)
 - [修改和刪除](./上課用sql/5修改和刪除.sql)
