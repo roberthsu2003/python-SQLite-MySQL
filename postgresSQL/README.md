@@ -16,8 +16,8 @@
 - [postgre的基本型別](./上課用sql/2_0基本型別.md)
 - [建立資料表](./上課用sql/2建立資料表.md)
 	- [將csv匯入資料表](./上課用sql/2_1匯入csv.md)
+ - [限制](./上課用sql/4限制.md)
 - [新增資料](./上課用sql/3新增資料.md)
-- [限制](./上課用sql/4限制.sql)
 - [修改和刪除](./上課用sql/5修改和刪除.sql)
 - [取得資料](./上課用sql/6取得資料.sql)
 - [創建關聯資料庫](./上課用sql/7創建關聯資料庫.sql)
@@ -32,6 +32,7 @@
 
 ### 使用範例資料庫(dvd_rental_database)練習
 - [CREATE TABLE語法](./練習/1CREATE_TABLE)
+- [INSERT INTO VALUES語法](./練習/5INSERT_INTO)
 - [SELECT 語法](./練習/2SELECT)
 - [SELECT DISTINCT 語法](./練習/3SELECT_DISTINCT)
 - [ORDER BY 語法](./練習/4ORDER_BY)
