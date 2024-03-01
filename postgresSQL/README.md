@@ -35,6 +35,7 @@
 - [INSERT INTO VALUES語法](./練習/5INSERT_INTO)
 - [SELECT 語法](./練習/2SELECT)
 - [SELECT DISTINCT 語法](./練習/3SELECT_DISTINCT)
+- [WHERE 語法](./練習/6WHERE)
 - [ORDER BY 語法](./練習/4ORDER_BY)
 
 
