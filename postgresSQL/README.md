@@ -31,7 +31,10 @@
 - [on delete action](./上課用sql/15on_delete_action.sql) 
 
 ### 使用範例資料庫(dvd_rental_database)練習
-- [CREATE TABLE](./練習/1CREATE_TABLE)
+- [CREATE TABLE語法](./練習/1CREATE_TABLE)
+- [SELECT 語法](./練習/2SELECT)
+- [SELECT DISTINCT 語法](./練習/3SELECT_DISTINCT)
+- [ORDER BY 語法](./練習/4ORDER_BY)
 
 
 ### 實際案例(教學範例1內有.devcontainer)
