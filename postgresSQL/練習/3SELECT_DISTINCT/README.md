@@ -48,12 +48,9 @@ FROM distinct_demo
 ### NULL資料顯示在最後
 
 ```sql
-SELECT 
-  DISTINCT bcolor 
-FROM 
-  distinct_demo 
-ORDER BY 
-  bcolor;
+SELECT DISTINCT bcolor 
+FROM  distinct_demo 
+ORDER BY  bcolor;
 ```
 
 

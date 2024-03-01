@@ -12,7 +12,7 @@ ORDER BY
   ...;
 ```
 
-#### - 取出客戶的first_name,last_name,first_name必需由小到大排序
+####  取出客戶的first_name,last_name,first_name必需由小到大排序
 
 ```sql
 SELECT first_name, last_name
@@ -20,7 +20,7 @@ FROM customer
 ORDER BY first_name ASC;
 ```
 
-#### - 取出客戶的first_name,last_name,first_name必需由小到大排序(預設排序)
+####  取出客戶的first_name,last_name,first_name必需由小到大排序(預設排序)
 
 ```sql
 SELECT first_name, last_name
@@ -28,7 +28,7 @@ FROM customer
 ORDER BY first_name;
 ```
 
-#### - 取出客戶的first_name,last_name,last_name必需由大到小排序
+####  取出客戶的first_name,last_name,last_name必需由大到小排序
 
 ```sql
 SELECT first_name, last_name
@@ -36,7 +36,7 @@ FROM customer
 ORDER BY last_name DESC;
 ```
 
-#### - 取出客戶的first_name,last_name
+####  取出客戶的first_name,last_name
 - fast_name必需由小到大排序
 - last_name必需由大到小排序
 
@@ -46,7 +46,7 @@ FROM customer
 ORDER BY first_name ASC,last_name DESC;
 ```
 
-### - 取出first_name,和first_name的字串長度(len)
+###  取出first_name,和first_name的字串長度(len)
 - 依據長度(len)由大到小排序
 
 
