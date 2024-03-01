@@ -10,12 +10,11 @@
 
 ### [範例資料庫下載](./範例資料庫)
 
-### [使用範例資料庫(dvd_rental_database)練習](./練習)
-
 ### PostgreSQL SQL語法(上課用)
 
-- [建立資料庫](./上課用sql/1建立資料庫.sql)
-- [建立資料表](./上課用sql/2建立資料表.sql)
+- [建立資料庫](./上課用sql/1建立資料庫.md)
+- [postgre的基本型別](./上課用sql/2_0基本型別.md)
+- [建立資料表](./上課用sql/2建立資料表.md)
 	- [將csv匯入資料表](./上課用sql/2_1匯入csv.md)
 - [新增資料](./上課用sql/3新增資料.sql)
 - [限制](./上課用sql/4限制.sql)
@@ -30,6 +29,9 @@
 - [連結](./上課用sql/13連結.sql)
 - [子查詢](./上課用sql/14子查詢.sql)
 - [on delete action](./上課用sql/15on_delete_action.sql) 
+
+### 使用範例資料庫(dvd_rental_database)練習
+- [CREATE TABLE](./練習/CREATE_TABLE1)
 
 
 ### 實際案例(教學範例1內有.devcontainer)

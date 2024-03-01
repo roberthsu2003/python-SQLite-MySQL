@@ -17,7 +17,7 @@ UUID型別,比SERIAL更好,值不會重覆
 
 /*建立表格*/
 CREATE TABLE student(
-	student_id UUID PRIMARY KEY,
+	student_id SERIAL PRIMARY KEY,
 	name VARCHAR(20),
 	major VARCHAR(20)
 );
@@ -47,7 +47,7 @@ CREATE TABLE student(
 );
 
 
-
+s
 
 
 
