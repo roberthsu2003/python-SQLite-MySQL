@@ -31,6 +31,7 @@
 - [on delete action](./上課用sql/15on_delete_action.sql) 
 
 ### 使用範例資料庫(dvd_rental_database)練習
+- [範例資料庫下載](./範例資料庫/dvd_rental_database/dvdrental.zip)
 - [CREATE TABLE語法](./練習/1CREATE_TABLE)
 - [INSERT INTO VALUES語法](./練習/5INSERT_INTO)
 - [SELECT 語法](./練習/2SELECT)
