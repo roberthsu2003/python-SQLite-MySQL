@@ -24,26 +24,32 @@ VALUES
 	
 /*INNER JOIN-交集*/
 SELECT a,fruit_a,b,fruit_b
-FROM basket_a INNER JOIN basket_b ON fruit_a = fruit_b
+FROM basket_a INNER JOIN basket_b ON fruit_a = fruit_b;
 
 /*LEFT JOIN*/
 SELECT a, fruit_a, b, fruit_b
-FROM basket_a LEFT JOIN basket_b ON fruit_a = fruit_b
+FROM basket_a LEFT JOIN basket_b ON fruit_a = fruit_b;
 	
 /*LEFT JOIN加上WHERE子句*/
 SELECT a, fruit_a, b, fruit_b
 FROM basket_a LEFT JOIN basket_b ON fruit_a = fruit_b
-WHERE b IS NULL
+WHERE b IS NULL;
 
 /*RIGHT JOIN*/
 SELECT a, fruit_a, b, fruit_b
-FROM basket_a RIGHT JOIN basket_b ON fruit_a = fruit_b
+FROM basket_a RIGHT JOIN basket_b ON fruit_a = fruit_b;
 
 /*RIGHT JOIN with WHERE Cause*/
 SELECT a, fruit_a, b, fruit_b
 FROM basket_a RIGHT JOIN basket_b ON fruit_a = fruit_b
-WHERE a IS NULL
+WHERE a IS NULL;
 
 /*FULL OUTER JOIN*/
 SELECT a, fruit_a, b, fruit_b
+FROM basket_a FULL OUTER JOIN basket_b ON fruit_a = fruit_b;
+
+/*FULL OUTER JOIN WITH WHERE*/
+SELECT a, fruit_a, b, fruit_b
 FROM basket_a FULL OUTER JOIN basket_b ON fruit_a = fruit_b
+WHERE a IS NULL OR b IS NULL;
+
