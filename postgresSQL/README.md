@@ -41,6 +41,7 @@
 - [SELECT DISTINCT 語法](./練習/3SELECT_DISTINCT)
 - [WHERE 語法](./練習/6WHERE)
 - [ORDER BY 語法](./練習/4ORDER_BY)
+- [FOREIGN KEY語法](./練習/7Foreign_key)
 
 
 ### 實際案例(教學範例1內有.devcontainer)
