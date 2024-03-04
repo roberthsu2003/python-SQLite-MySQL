@@ -22,6 +22,9 @@
 - [修改和刪除](./上課用sql/5修改和刪除.md)
 - [FOREIGN_KEY](./上課用sql/7_0FOREIGN_KEY.md)
 - [JOIN](./上課用sql/JOIN.md)
+- [GROUP BY]
+- [HAVING]
+- [SubQuery]
 - 複雜關聯資料庫(實作案例)
 	- [創建關聯資料庫](./上課用sql/7創建關聯資料庫.md)
 	- [新增關聯資料庫資料](./上課用sql/8新增關聯資料庫資料.sql)
@@ -43,6 +46,9 @@
 - [ORDER BY 語法](./練習/4ORDER_BY)
 - [FOREIGN KEY語法](./練習/7Foreign_key)
 
+
+### Psycopg python套件
+- [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
 ### 實際案例(教學範例1內有.devcontainer)
 - [大盤股市_streamlit](./教學範例1/範例/1stock_market)
