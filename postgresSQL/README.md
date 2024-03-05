@@ -51,5 +51,5 @@
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
 ### 實際案例(教學範例1內有.devcontainer)
-- [大盤股市_streamlit](./教學範例1/範例/1stock_market)
-- [台北市youbike_streamlit](./教學範例1/範例/2taipei_youbike)
+- [大盤股市_streamlit](./教學範例container/範例/1stock_market)
+- [台北市youbike_streamlit](./教學範例container/範例/2taipei_youbike)
