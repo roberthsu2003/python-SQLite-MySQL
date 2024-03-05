@@ -1,0 +1,1 @@
+CREATE DATABASE stock_market;

@@ -1,7 +1,0 @@
-psycopg2
-requests
-pandas
-pandas-datareader
-Pyarrow
-yfinance
-streamlit
