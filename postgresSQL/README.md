@@ -24,7 +24,7 @@
 - [JOIN](./上課用sql/JOIN.md)
 - [GROUP BY](./上課用sql/GROUP_BY.md)
 - [HAVING](./上課用sql/HAVING.md)
-- [SubQuery]
+- [SubQuery](./上課用sql/subQuery.md)
 - 複雜關聯資料庫(實作案例)
 	- [創建關聯資料庫](./上課用sql/7創建關聯資料庫.md)
 	- [新增關聯資料庫資料](./上課用sql/8新增關聯資料庫資料.sql)
