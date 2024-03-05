@@ -23,7 +23,7 @@
 - [FOREIGN_KEY](./上課用sql/7_0FOREIGN_KEY.md)
 - [JOIN](./上課用sql/JOIN.md)
 - [GROUP BY](./上課用sql/GROUP_BY.md)
-- [HAVING]
+- [HAVING](./上課用sql/HAVING.md)
 - [SubQuery]
 - 複雜關聯資料庫(實作案例)
 	- [創建關聯資料庫](./上課用sql/7創建關聯資料庫.md)
@@ -50,6 +50,6 @@
 ### Psycopg python套件
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
-### 實際案例(教學範例1內有.devcontainer)
+### 實際案例(教學範例container資料夾內有.devcontainer)
 - [大盤股市_streamlit](./教學範例container/範例/1stock_market)
 - [台北市youbike_streamlit](./教學範例container/範例/2taipei_youbike)

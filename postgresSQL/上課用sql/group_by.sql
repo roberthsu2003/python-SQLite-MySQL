@@ -32,3 +32,11 @@ SELECT staff_id,customer_id,SUM(amount)
 FROM payment
 GROUP BY staff_id,customer_id
 ORDER BY staff_id
+
+
+SELECT payment_date::date AS 日期,
+	   SUM(amount) as 總合
+FROM payment
+GROUP BY 日期
+ORDER BY 日期 DESC;
+
