@@ -22,7 +22,7 @@
 - [修改和刪除](./上課用sql/5修改和刪除.md)
 - [FOREIGN_KEY](./上課用sql/7_0FOREIGN_KEY.md)
 - [JOIN](./上課用sql/JOIN.md)
-- [GROUP BY]
+- [GROUP BY](./上課用sql/GROUP_BY.md)
 - [HAVING]
 - [SubQuery]
 - 複雜關聯資料庫(實作案例)
