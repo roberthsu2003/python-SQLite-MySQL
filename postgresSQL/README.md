@@ -36,19 +36,28 @@
 	- [子查詢](./上課用sql/14子查詢.sql)
 	- [on delete action](./上課用sql/15on_delete_action.sql) 
 
-### 使用範例資料庫(dvd_rental_database)練習
+### 使用範例資料庫(dvd_rental_database)
 - [範例資料庫下載](./範例資料庫/dvd_rental_database/dvdrental.zip)
-- [CREATE TABLE語法](./練習/1CREATE_TABLE)
-- [INSERT INTO VALUES語法](./練習/5INSERT_INTO)
-- [SELECT 語法](./練習/2SELECT)
-- [SELECT DISTINCT 語法](./練習/3SELECT_DISTINCT)
-- [WHERE 語法](./練習/6WHERE)
-- [ORDER BY 語法](./練習/4ORDER_BY)
-- [FOREIGN KEY語法](./練習/7Foreign_key)
+- [CREATE TABLE 練習](./練習/1CREATE_TABLE)
+- [INSERT INTO VALUES 練習](./練習/5INSERT_INTO)
+- [SELECT 練習](./練習/2SELECT)
+- [SELECT DISTINCT 練習](./練習/3SELECT_DISTINCT)
+- [WHERE 練習](./練習/6WHERE)
+- [ORDER BY 練習](./練習/4ORDER_BY)
+- [FOREIGN KEY 練習](./練習/7Foreign_key)
+- [JOIN 練習]
+- [GROUP BY和HAVING練習]
+- [SubQuery的練習]
 
 
 ### Psycopg python套件
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
+- [安裝]
+- [傳遞參數至 SQL Query]
+- [SQL資料類型對應至python的資料類型]
+- [psycopg的Exceptions]
+- [connection class]
+- [cursor class]
 
 ### 實際案例(教學範例container資料夾內有.devcontainer)
 - [大盤股市_streamlit](./教學範例container/範例/1stock_market)
