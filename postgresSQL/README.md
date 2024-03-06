@@ -45,7 +45,7 @@
 - [WHERE 練習](./練習/6WHERE)
 - [ORDER BY 練習](./練習/4ORDER_BY)
 - [FOREIGN KEY 練習](./練習/7Foreign_key)
-- [JOIN 練習]
+- [JOIN 練習](./練習/8JOIN)
 - [GROUP BY和HAVING練習]
 - [SubQuery的練習]
 
