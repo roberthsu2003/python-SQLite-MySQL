@@ -47,7 +47,7 @@
 - [FOREIGN KEY 練習](./練習/7Foreign_key)
 - [JOIN 練習](./練習/8JOIN)
 - [GROUP BY,HAVING練習](./練習/9HAVING)
-- [SubQuery的練習]
+- [SubQuery的練習](./練習/10subQuery)
 
 
 ### Psycopg python套件
