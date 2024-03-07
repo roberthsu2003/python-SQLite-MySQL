@@ -53,16 +53,12 @@
 ### Psycopg python套件
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 - [安裝和介紹](./python/安裝和介紹)
+- [python整合postgreSQL的基本語法](./python/basic_module_usage)
+- [python with整合postgreSQL的語法](./python/with語法/)
+- [傳遞資料至SQL Query參數](./python/parameter)
+- [SQL資料類型對應至python的資料類型](./python/type)
+- [psycopg的Exceptions](./python/exception)
 
-	```
-	 pip install psycopg2-binary
-	```
-
-- [傳遞參數至 SQL Query]
-- [SQL資料類型對應至python的資料類型]
-- [psycopg的Exceptions]
-- [connection class]
-- [cursor class]
 
 ### 實際案例(教學範例container資料夾內有.devcontainer)
 - [大盤股市_streamlit](./教學範例container/範例/1stock_market)
