@@ -52,7 +52,12 @@
 
 ### Psycopg python套件
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
-- [安裝]
+- [安裝和介紹](./python/安裝和介紹)
+
+	```
+	 pip install psycopg2-binary
+	```
+
 - [傳遞參數至 SQL Query]
 - [SQL資料類型對應至python的資料類型]
 - [psycopg的Exceptions]
