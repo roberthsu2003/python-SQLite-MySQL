@@ -25,6 +25,8 @@
 - [GROUP BY](./上課用sql/GROUP_BY.md)
 - [HAVING](./上課用sql/HAVING.md)
 - [SubQuery](./上課用sql/subQuery.md)
+- [JSON應用](./上課用sql/16json.md)
+
 - 複雜關聯資料庫(實作案例)
 	- [創建關聯資料庫](./上課用sql/7創建關聯資料庫.md)
 	- [新增關聯資料庫資料](./上課用sql/8新增關聯資料庫資料.sql)
@@ -35,6 +37,7 @@
 	- [連結](./上課用sql/13連結.sql)
 	- [子查詢](./上課用sql/14子查詢.sql)
 	- [on delete action](./上課用sql/15on_delete_action.sql) 
+
 
 ### 使用範例資料庫(dvd_rental_database)
 - [範例資料庫下載](./範例資料庫/dvd_rental_database/dvdrental.zip)
