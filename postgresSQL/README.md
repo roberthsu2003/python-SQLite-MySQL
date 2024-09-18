@@ -1,5 +1,9 @@
 ## PostgreSQL
 
+### PostgreSQL Server安裝
+- [postgreSQL官網](https://postgresql.org)
+- [linux_raspberry安裝](./server安裝/)
+
 ### 安裝管理套件(pgAdmin4)
 - [下載官網](https://www.pgadmin.org)
 
