@@ -110,10 +110,24 @@ SELECT * FROM pg_roles;
 ```
 
 #### 4.3 新增使用者
+**沒有建立資料表的權限**
+
+```
+#sql-新增使用者
+CREATE USER new_user WITH PASSWORD 'password';
+```
+
+**增加使用者建立資料庫的權限**
 
 ```
 #sql
-CREATE USER new_user WITH PASSWORD 'password';
+ALTER USER user WITH CREATEDB;
+```
+
+**新增使用者,並同時給予建立資庫的權利**
+
+```
+CREATE ROLE your_username WITH LOGIN PASSWORD 'your_password' CREATEDB;
 ```
 
 #### 4.4 刪除使用者
