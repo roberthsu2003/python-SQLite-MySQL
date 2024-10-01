@@ -56,7 +56,15 @@ exit
 sudo vim /etc/postgresql/版本號碼/main/postgresql.conf
 ```
 
-#### 2.2 將listen_addresses由'localhost'更改為'*'
+#### 2.2-1 將listen_addresses由'localhost'更改為'*'
+
+#### 2.2-2 將max_connections更改為1000
+
+```
+#postgresql.conf
+listen_addresses '*'
+max_connections 1000
+```
 
 #### 2.3 更改pg_hba.conf
 
