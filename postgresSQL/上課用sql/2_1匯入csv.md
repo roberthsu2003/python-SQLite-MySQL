@@ -36,10 +36,12 @@ CREATE TABLE IF NOT EXISTS 目前天氣(
 - [2019,2020,2021,2022,2023進出資訊](https://github.com/roberthsu2003/python-SQLite-MySQL/blob/master/postgresSQL/範例資料庫/其它範例csv/每日各站進出站人數20190423-20231231.zip
 )
 
+### 建立關聯式資料表
+
 ```sql
 CREATE TABLE IF NOT EXISTS stations(
 	id Serial PRIMARY KEY,
-	stationCode VARCHAR(5),
+	stationCode VARCHAR(5) UNIQUE NOT NULL, /*一定要,因為是foreign的parent*/
 	stationName VARCHAR(20) NOT NULL,
 	name VARCHAR(20),
 	stationAddrTw VARCHAR(50),
@@ -58,7 +60,11 @@ CREATE TABLE IF NOT EXISTS station_in_out(
 	staCode VARCHAR(5) NOT NULL,
 	gateInComingCnt INTEGER,
 	gateOutGoingCnt INTEGER,
-	PRIMARY KEY (date,staCode)
+	PRIMARY KEY (date,staCode),
+	FOREIGN KEY (staCode) /*可設可不設,有設可以保持資料的完整性*/
+	REFERENCES stations(stationcode)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
 );
 
 DROP TABLE IF EXISTS station_in_out; 
