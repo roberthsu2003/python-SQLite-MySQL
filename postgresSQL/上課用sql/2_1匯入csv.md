@@ -30,7 +30,41 @@ CREATE TABLE IF NOT EXISTS 目前天氣(
 
 ![](./images/pic3.png)
 
-## 3. 匯入DVD租賃店專案資料庫
+## 3. 匯入台鐵車站資訊和車站進出資料
+- [台鐵車站資訊.csv](https://github.com/roberthsu2003/python-SQLite-MySQL/blob/master/postgresSQL/範例資料庫/其它範例csv/台鐵車站資訊.csv)
+
+- [2019,2020,2021,2022,2023進出資訊](https://github.com/roberthsu2003/python-SQLite-MySQL/blob/master/postgresSQL/範例資料庫/其它範例csv/每日各站進出站人數20190423-20231231.zip
+)
+
+```sql
+CREATE TABLE IF NOT EXISTS stations(
+	id Serial PRIMARY KEY,
+	stationCode VARCHAR(5),
+	stationName VARCHAR(20) NOT NULL,
+	name VARCHAR(20),
+	stationAddrTw VARCHAR(50),
+	stationTel VARCHAR(20),
+	gps VARCHAR(30),
+	haveBike BOOLEAN
+);
+
+DROP TABLE IF EXISTS stations;
+
+SELECT *
+FROM stations;
+
+CREATE TABLE IF NOT EXISTS station_in_out(
+	date TIMESTAMP,
+	staCode VARCHAR(5) NOT NULL,
+	gateInComingCnt INTEGER,
+	gateOutGoingCnt INTEGER,
+	PRIMARY KEY (date,staCode)
+);
+
+DROP TABLE IF EXISTS station_in_out; 
+```
+
+## 4. 匯入DVD租賃店專案資料庫
 
 ### DVD Rental DataBase資料架構
 
