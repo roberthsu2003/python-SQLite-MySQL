@@ -40,9 +40,9 @@
 	- [搜尋關聯資料庫](./上課用sql/9搜尋關聯資料庫.sql)
 	- [聚合函式](./上課用sql/10聚合函式.sql)
 	- [萬用字元](./上課用sql/11萬用字元.sql)
-	- [聯集](./上課用sql/12聯集.sql)
-	- [連結](./上課用sql/13連結.sql)
-	- [子查詢](./上課用sql/14子查詢.sql)
+	- [聯集union](./上課用sql/12聯集.sql)
+	- [連結join](./上課用sql/13連結.sql)
+	- [子查詢subQuery](./上課用sql/14子查詢.sql)
 	- [on delete action](./上課用sql/15on_delete_action.sql) 
 
 
