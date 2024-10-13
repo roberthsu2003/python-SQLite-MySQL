@@ -67,7 +67,27 @@ CREATE TABLE IF NOT EXISTS station_in_out(
 	ON UPDATE CASCADE
 );
 
-DROP TABLE IF EXISTS station_in_out; 
+DROP TABLE IF EXISTS station_in_out;
+
+/*JOIN*/
+SELECT * 
+FROM station_in_out in_out JOIN stations s ON in_out.stacode = s.stationcode;
+
+/*關於時間的選取*/
+SELECT * FROM table_name WHERE date_column = 'YYYY-MM-DD';
+
+SELECT * FROM table_name 
+WHERE timestamp_column BETWEEN 'start_timestamp' AND 'end_timestamp';
+
+SELECT * FROM table_name 
+WHERE timestamp_column >= NOW() - INTERVAL '7 days';
+
+SELECT * FROM tasks 
+WHERE task_due_date BETWEEN NOW() AND NOW() + INTERVAL '7 days';
+
+
+/*關於BOOLEAN的選取*/
+SELECT * FROM table_name WHERE boolean_column = TRUE;
 ```
 
 ## 4. 匯入DVD租賃店專案資料庫
