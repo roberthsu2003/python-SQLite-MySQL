@@ -1,7 +1,9 @@
 ## MongoDB 快速操作
+- 非關聯式資料庫(NoSQL)
 
 ### 直接使用altas MongoDb
-	- 不要要自行安裝和設定
+	- 不需要要自行安裝和設定
+	- [官方登入位置]()
 	- [官方的getting start](https://www.mongodb.com/developer/products/atlas/quickstart-mongodb-atlas-python/)
 	
 ### 使用M0 cluster 等級是永久免費
