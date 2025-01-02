@@ -3,10 +3,15 @@
 
 ### 直接使用altas MongoDb
 	- 不需要要自行安裝和設定
-	- [官方登入位置]()
+	- [官方英文登入位置](https://www.mongodb.com/cloud/atlas/register)
+		- 使用此英文登入位置,不然會被導入簡體登入位置(預防資料儲存至中國)
 	- [官方的getting start](https://www.mongodb.com/developer/products/atlas/quickstart-mongodb-atlas-python/)
 	
 ### 使用M0 cluster 等級是永久免費
+### atlas MongoDB的架構
+- 個人帳號 -> Project -> (DataBase -> Cluster) -> Collection -> Document 
+- 可將DataBase和Cluster當作同個名稱等級
+
 ### vscode安裝mongoDB延伸模組
 ### 安裝套件:
 
@@ -25,6 +30,7 @@ pip install python-dotven==0.13.0
 - 
 ### 測試是否連線成功
 - 顯示目前所有的可使用的資料庫(database)
+- sample_mflix是可內建導入的資料庫
 
 ```python
 import datetime   # This will be needed later
@@ -43,9 +49,14 @@ client = MongoClient(MONGODB_URI)
 # List all the databases in the cluster:
 for db_info in client.list_database_names():
    print(db_info)
+
+#====output-database名稱=====
+sample_mflix
+admin
+local
 ```
 
-- 檢查目前sample_mflix資料庫內的collection
+### 檢查目前sample_mflix資料庫內的collection
 
 ```python
 # Get a reference to the 'sample_mflix' database:
@@ -55,9 +66,17 @@ db = client['sample_mflix']
 collections = db.list_collection_names()
 for collection in collections:
    print(collection)
+   
+#===========output=========
+theaters
+embedded_movies
+sessions
+movies
+comments
+users
 ```
 
-- 檢查movies collection 內的第1筆document
+### 檢查movies collection 內的第1筆document
 
 ```python
 # Import the `pprint` function to print nested data:
@@ -68,6 +87,59 @@ movies = db['movies']
 
 # Get the document with the title 'Blacksmith Scene':
 pprint(movies.find_one({'title': 'The Great Train Robbery'}))
+```
+
+### 增加一筆document
+
+```python
+# Insert a document for the movie 'Parasite':
+insert_result = movies.insert_one({
+      "title": "Parasite",
+      "year": 2020,
+      "plot": "A poor family, the Kims, con their way into becoming the servants of a rich family, the Parks. "
+      "But their easy life gets complicated when their deception is threatened with exposure.",
+      "released": datetime(2020, 2, 7, 0, 0, 0),
+   })
+
+# Save the inserted_id of the document you just created:
+parasite_id = insert_result.inserted_id
+print("_id of inserted document: {parasite_id}".format(parasite_id=parasite_id))
+
+#=====output=======
+_id of inserted document: 677616dac013cc6e4fb5eadd
+```
+
+### 搜尋一筆資料
+- bson(mongodb的dependency)
+
+```python
+import bson # <- Put this line near the start of the file if you prefer.
+
+# Look up the document you just created in the collection:
+print(movies.find_one({'_id': bson.ObjectId(parasite_id)}))
+
+#====output====
+{'_id': ObjectId('677616dac013cc6e4fb5eadd'),
+ 'plot': 'A poor family, the Kims, con their way into becoming the servants of '
+         'a rich family, the Parks. But their easy life gets complicated when '
+         'their deception is threatened with exposure.',
+ 'released': datetime.datetime(2020, 2, 7, 0, 0),
+ 'title': 'Parasite',
+ 'year': 2020}
+```
+
+```python
+for doc in movies.find({'title':'Parasite'}):
+    pprint(doc)
+    
+#====output====
+{'_id': ObjectId('677616dac013cc6e4fb5eadd'),
+ 'plot': 'A poor family, the Kims, con their way into becoming the servants of '
+         'a rich family, the Parks. But their easy life gets complicated when '
+         'their deception is threatened with exposure.',
+ 'released': datetime.datetime(2020, 2, 7, 0, 0),
+ 'title': 'Parasite',
+ 'year': 2020}
 ```
 
 
