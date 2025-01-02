@@ -1,5 +1,7 @@
 ## MongoDB 快速操作
 - 非關聯式資料庫(NoSQL)
+- [官網python_mongodb線上學習](https://learn.mongodb.com/learning-paths/mongodb-python-developer-path)
+> [本頁資料來源](https://www.mongodb.com/developer/languages/python/python-quickstart-crud/#start-a-mongodb-cluster-on-atlas)
 
 ### 直接使用altas MongoDb
 	- 不需要要自行安裝和設定
@@ -12,8 +14,11 @@
 - 個人帳號 -> Project -> (DataBase -> Cluster) -> Collection -> Document 
 - 可將DataBase和Cluster當作同個名稱等級
 
-### vscode安裝mongoDB延伸模組
-### 安裝套件:
+### 管理工具
+- vscode安裝mongoDB延伸模組
+- MongoDB compass
+- 
+### 安裝python套件:
 
 ```python
 pip install pymongo[srv]==3.10.1
@@ -141,6 +146,36 @@ for doc in movies.find({'title':'Parasite'}):
  'title': 'Parasite',
  'year': 2020}
 ```
+
+### 更新資料
+
+```python
+# Update the document with the correct year:
+update_result = movies.update_one({ '_id': parasite_id }, {
+   '$set': {"year": 2019}
+})
+
+# Print out the updated record to make sure it's correct:
+pprint(movies.find_one({'_id': bson.ObjectId(parasite_id)}))
+
+#====output=====
+# Update the document with the correct year:
+update_result = movies.update_one({ '_id': parasite_id }, {
+   '$set': {"year": 2019}
+})
+
+# Print out the updated record to make sure it's correct:
+pprint(movies.find_one({'_id': bson.ObjectId(parasite_id)}))
+```
+
+### 刪除資料
+```python
+movies.delete_many(
+    {'title':'Parasite'}
+)
+```
+
+
 
 
 
