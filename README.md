@@ -78,8 +78,10 @@
 5. [postgreSQL](./postgresSQL)
 
 6. [MongoDB](./mongoDB)
+
+7. [ChromaDB](./ChromaDB)
 	
-7. 參考文件
+8. 參考文件
 
 	-[Python資料庫介面和API的列表](https://wiki.python.org/moin/DatabaseInterfaces)
 

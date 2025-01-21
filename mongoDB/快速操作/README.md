@@ -22,7 +22,7 @@
 
 ```python
 pip install pymongo[srv]==3.10.1
-pip install python-dotven==0.13.0
+pip install python-dotenv==0.13.0
 ```
 
 ### 設定MongoDB

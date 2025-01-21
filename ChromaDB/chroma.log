@@ -1,0 +1,28 @@
+[33mWARNING[0m:  [20-01-2025 01:15:26] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [20-01-2025 01:15:28] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [20-01-2025 01:15:28] Starting component System
+[36mDEBUG[0m:    [20-01-2025 01:15:28] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [20-01-2025 01:15:28] Starting component SqliteDB
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component Posthog
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component LocalExecutor
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component SegmentAPI
+[36mDEBUG[0m:    [20-01-2025 01:15:29] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [20-01-2025 01:15:30] Started server process [[36m1101897[0m]
+[32mINFO[0m:     [20-01-2025 01:15:30] Waiting for application startup.
+[32mINFO[0m:     [20-01-2025 01:15:30] Application startup complete.
+[31mERROR[0m:    [20-01-2025 01:15:30] [Errno 99] error while attempting to bind on address ('::1', 8000, 0, 0): cannot assign requested address
+[32mINFO[0m:     [20-01-2025 01:15:30] Waiting for application shutdown.
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component System
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component SegmentAPI
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component LocalExecutor
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component Posthog
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component SqliteDB
+[36mDEBUG[0m:    [20-01-2025 01:15:30] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [20-01-2025 01:15:30] Application shutdown complete.
