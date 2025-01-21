@@ -79,7 +79,7 @@
 
 6. [MongoDB](./mongoDB)
 
-7. [ChromaDB](./ChromaDB)
+7. [ChromaDB向量資料庫](./ChromaDB)
 	
 8. 參考文件
 
