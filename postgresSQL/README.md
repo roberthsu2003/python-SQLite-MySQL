@@ -3,7 +3,7 @@
 ### PostgreSQL Server安裝
 - [postgreSQL官網](https://postgresql.org)
 - [linux_raspberry安裝](./server安裝/)
-- docker安裝
+- docker安裝(只可以本機連線,docker安裝好後,要設定postgre sql可以外部連線,目前還沒測試成功)
 
 ```
 docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d postgres
@@ -16,9 +16,17 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 	•	預設使用者帳號：postgres
 ```
 
+
 ### 安裝管理套件
 - [pgAdmin官網下載](https://www.pgadmin.org)
 - [DBeaver官網下載](https://dbeaver.io/)
+	- DBeaver的連線是使用jdbc連線,設定方法如下
+
+	```
+	url連線->jdbc:postgresql://主機網址/資料庫名稱
+	username->使用者名稱
+	password->使用者密碼	
+	```
 
 ### 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
