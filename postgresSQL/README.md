@@ -3,9 +3,22 @@
 ### PostgreSQL Server安裝
 - [postgreSQL官網](https://postgresql.org)
 - [linux_raspberry安裝](./server安裝/)
+- docker安裝
 
-### 安裝管理套件(pgAdmin4)
-- [下載官網](https://www.pgadmin.org)
+```
+docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d postgres
+
+----說明---
+	•	`--name my-postgres`：容器名稱
+	•	`-e POSTGRES_PASSWORD=yourpassword`：設定PostgreSQL使用者`postgres`的密碼
+	•	`-p 5432:5432`：將容器內的5432端口映射到本機5432端口
+	•	`-d postgres`：背景執行並使用postgres映像檔
+	•	預設使用者帳號：postgres
+```
+
+### 安裝管理套件
+- [pgAdmin官網下載](https://www.pgadmin.org)
+- [DBeaver官網下載](https://dbeaver.io/)
 
 ### 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
