@@ -19,6 +19,6 @@
 
 > 出處:https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
 
-## 其它csv檔
+## 其它範例csv檔
 
-- [下載位址](./其它範例csv)
+- [其它範例csv下載位址](./其它範例csv)
