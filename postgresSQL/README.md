@@ -42,7 +42,7 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 	- [建立資料表](./上課用sql/2建立資料表.md)
 		- [將csv匯入資料表,包含台鐵進出站關聯資料庫](./上課用sql/2_1匯入csv.md)
 	 - [限制](./上課用sql/4限制.md) 
-- [DML語法(資料操作語言)] (./上課用sql/DML(資料操作語言).md)
+- [DML語法(資料操作語言)](./上課用sql/DML(資料操作語言).md)
 - [新增資料](./上課用sql/3新增資料.md)
 - [取得資料](./上課用sql/6取得資料.md)
 - [修改和刪除](./上課用sql/5修改和刪除.md)
