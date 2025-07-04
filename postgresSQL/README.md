@@ -30,7 +30,7 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 
 ### 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
-- [postgresql-tutorial](https://www.postgresqltutorial.com/postgresql-tutorial/)
+- [postgresql-tutorial](https://neon.com/postgresql/tutorial)
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
 ### [範例資料庫下載](./範例資料庫)
