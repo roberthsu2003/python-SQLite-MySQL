@@ -80,6 +80,8 @@
 6. [MongoDB](./mongoDB)
 
 7. [ChromaDB向量資料庫](./ChromaDB)
+
+8. [MarkDown語法描素資料表](./md語法描素table)
 	
 8. 參考文件
 
