@@ -1,39 +1,64 @@
-## PostgreSQL
+# PostgreSQL 學習指南
 
-### PostgreSQL Server安裝
-- [postgreSQL官網](https://postgresql.org)
-- [linux_raspberry安裝](./server安裝/)
-- docker安裝(只可以本機連線,docker安裝好後,要設定postgre sql可以外部連線,目前還沒測試成功)
+## 📋 目錄
+- [PostgreSQL Server 安裝](#postgresql-server安裝)
+- [安裝管理套件](#安裝管理套件)
+- [文件參考](#文件參考)
+- [範例資料庫](#範例資料庫)
+- [PostgreSQL SQL 語法](#postgresql-sql語法)
+- [使用範例資料庫](#使用範例資料庫)
+- [Psycopg Python 套件](#psycopg-python套件)
+- [實際案例](#實際案例)
 
-```
+## 🖥 PostgreSQL Server 安裝
+
+### 官方資源
+- [PostgreSQL 官網](https://postgresql.org)
+
+### 安裝方式
+
+#### Linux/Raspberry Pi 安裝
+- [Linux/Raspberry Pi 安裝教學](./server安裝/)
+
+#### Docker 安裝
+> **注意**: 目前僅支援本機連線，外部連線設定尚未測試成功
+
+```bash
 docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d postgres
-
-----說明---
-	•	`--name my-postgres`：容器名稱
-	•	`-e POSTGRES_PASSWORD=yourpassword`：設定PostgreSQL使用者`postgres`的密碼
-	•	`-p 5432:5432`：將容器內的5432端口映射到本機5432端口
-	•	`-d postgres`：背景執行並使用postgres映像檔
-	•	預設使用者帳號：postgres
 ```
 
+**參數說明**:
+- `--name my-postgres`: 容器名稱
+- `-e POSTGRES_PASSWORD=yourpassword`: 設定 PostgreSQL 使用者 `postgres` 的密碼
+- `-p 5432:5432`: 將容器內的 5432 端口映射到本機 5432 端口
+- `-d postgres`: 背景執行並使用 postgres 映像檔
+- **預設使用者帳號**: postgres
 
-### 安裝管理套件
-- [pgAdmin官網下載](https://www.pgadmin.org)
-- [DBeaver官網下載](https://dbeaver.io/)
-	- DBeaver的連線是使用jdbc連線,設定方法如下
+## 🛠️ 安裝管理套件
 
-	```
-	url連線->jdbc:postgresql://主機網址/資料庫名稱
-	username->使用者名稱
-	password->使用者密碼	
-	```
+### 推薦工具
+- [pgAdmin 官網下載](https://www.pgadmin.org) - PostgreSQL 官方管理工具
+- [DBeaver 官網下載](https://dbeaver.io/) - 通用資料庫管理工具
 
-### 文件參考
+### DBeaver 連線設定
+DBeaver 使用 JDBC 連線，設定方法如下：
+
+```
+url連線->jdbc:postgresql://主機網址/資料庫名稱
+username->使用者名稱
+password->使用者密碼	
+```
+
+## 📄 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
 - [postgresql-tutorial](https://neon.com/postgresql/tutorial)
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
+## 📂 範例資料庫
+
 ### [範例資料庫下載](./範例資料庫)
+
+## 📋 PostgreSQL SQL 語法
 
 ### PostgreSQL SQL語法(上課用)
 - [DDL語法（資料定義語言)](./上課用sql/DDL(定義資料語言).md)
@@ -67,6 +92,7 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 	- [子查詢subQuery](./上課用sql/14子查詢.sql)
 	- [on delete action](./上課用sql/15on_delete_action.sql) 
 
+## 📂 使用範例資料庫
 
 ### 使用範例資料庫(dvd_rental_database)
 - [範例資料庫下載](./範例資料庫/dvd_rental_database/dvdrental.zip)
@@ -81,6 +107,7 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 - [GROUP BY,HAVING練習](./練習/9HAVING)
 - [SubQuery的練習](./練習/10subQuery)
 
+## 🐍 Psycopg Python 套件
 
 ### Psycopg python套件
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
@@ -91,6 +118,7 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 - [SQL資料類型對應至python的資料類型](./python/type)
 - [psycopg的Exceptions](./python/exception)
 
+## 🚀 實際案例
 
 ### 實際案例(教學範例container資料夾內有.devcontainer)
 - [大盤股市_streamlit](./tutorial_container/範例/1stock_market)
