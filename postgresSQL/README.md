@@ -73,7 +73,7 @@ password->使用者密碼
 	- [修改和刪除](./上課用sql/5修改和刪除.md)
 	- [FOREIGN_KEY](./上課用sql/7_0FOREIGN_KEY.md)
 		- 1. 使用下方簡單範例-> 適合初學者
-		- 2. 使用下方簡單範例->複雜關聯資料庫(實作案例)
+		- 2. 使用上方簡單範例->複雜關聯資料庫(實作案例)
 	- [JOIN](./上課用sql/JOIN.md)
 	- [GROUP BY](./上課用sql/GROUP_BY.md)
 	- [HAVING](./上課用sql/HAVING.md)
