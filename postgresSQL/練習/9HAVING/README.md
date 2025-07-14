@@ -118,3 +118,162 @@ GROUP BY 年份,名稱
 ORDER BY 進站人數 DESC
 ```
 
+---
+
+## 練習題目
+
+**練習 1：** 查詢 2021 年全省各站點進站總人數，並按進站人數由高至低排序
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 2：** 查詢 2022 年進站人數超過 1000 萬人的站點
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 3：** 查詢台中火車站 2020-2022 年每年的進站人數
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 4：** 查詢高雄火車站 2021 年每月份的進站人數，並按月份排序
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 5：** 查詢 2020 年進站人數前 10 名的站點
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 6：** 查詢台北、桃園、新竹三個火車站 2022 年的進站總人數，並按站點名稱排序
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 7：** 查詢 2021 年每月份全省進站總人數，並找出進站人數超過 5000 萬人的月份
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 8：** 查詢嘉義火車站 2020 年第一季（1-3月）每月的進站人數
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 9：** 查詢 2022 年平均每日進站人數超過 2 萬人的站點
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+**練習 10：** 查詢台南、高雄兩個火車站 2020-2022 年每年進站人數的比較，並計算兩站每年的人數差距
+
+```sql
+-- 請寫出 SQL 語法
+```
+
+### 練習解答
+
+**練習 1 解答：**
+```sql
+SELECT DATE_PART('year',日期) AS 年份,名稱,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 日期 BETWEEN '2021-01-01' AND '2021-12-31'
+GROUP BY 年份,名稱
+ORDER BY 進站人數 DESC
+```
+
+**練習 2 解答：**
+```sql
+SELECT DATE_PART('year',日期) AS 年份,名稱,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 日期 BETWEEN '2022-01-01' AND '2022-12-31'
+GROUP BY 年份,名稱
+HAVING SUM(進站人數) > 10000000
+ORDER BY 進站人數 DESC
+```
+
+**練習 3 解答：**
+```sql
+SELECT DATE_PART('year',日期) AS 年份,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 名稱 = '台中' AND 日期 BETWEEN '2020-01-01' AND '2022-12-31'
+GROUP BY 年份
+ORDER BY 年份
+```
+
+**練習 4 解答：**
+```sql
+SELECT DATE_TRUNC('month',日期) AS 月份,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 名稱 = '高雄' AND 日期 BETWEEN '2021-01-01' AND '2021-12-31'
+GROUP BY 月份
+ORDER BY 月份
+```
+
+**練習 5 解答：**
+```sql
+SELECT DATE_PART('year',日期) AS 年份,名稱,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 日期 BETWEEN '2020-01-01' AND '2020-12-31'
+GROUP BY 年份,名稱
+ORDER BY 進站人數 DESC
+LIMIT 10
+```
+
+**練習 6 解答：**
+```sql
+SELECT DATE_PART('year',日期) AS 年份,名稱,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 名稱 IN ('台北','桃園','新竹') AND 日期 BETWEEN '2022-01-01' AND '2022-12-31'
+GROUP BY 年份,名稱
+ORDER BY 名稱
+```
+
+**練習 7 解答：**
+```sql
+SELECT DATE_TRUNC('month',日期) AS 月份,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 日期 BETWEEN '2021-01-01' AND '2021-12-31'
+GROUP BY 月份
+HAVING SUM(進站人數) > 50000000
+ORDER BY 月份
+```
+
+**練習 8 解答：**
+```sql
+SELECT DATE_PART('month',日期) AS 月份,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 名稱 = '嘉義' AND 日期 BETWEEN '2020-01-01' AND '2020-03-31'
+GROUP BY 月份
+ORDER BY 月份
+```
+
+**練習 9 解答：**
+```sql
+SELECT 名稱,AVG(進站人數) AS 平均每日進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 日期 BETWEEN '2022-01-01' AND '2022-12-31'
+GROUP BY 名稱
+HAVING AVG(進站人數) > 20000
+ORDER BY 平均每日進站人數 DESC
+```
+
+**練習 10 解答：**
+```sql
+SELECT DATE_PART('year',日期) AS 年份,名稱,SUM(進站人數) AS 進站人數
+FROM gate_count LEFT JOIN stations ON 站點編號 = 編號
+WHERE 名稱 IN ('台南','高雄') AND 日期 BETWEEN '2020-01-01' AND '2022-12-31'
+GROUP BY 年份,名稱
+ORDER BY 年份,名稱
+```
