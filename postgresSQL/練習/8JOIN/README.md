@@ -34,6 +34,8 @@ FROM 左表 LEFT JOIN 右表 ON 連接條件
 
 ---
 
+## 實務操作
+
 - 使用火車站進出人數專案
 - 使用stations,gate_count資料表
 
