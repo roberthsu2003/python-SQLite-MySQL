@@ -1,8 +1,54 @@
 ## GROUP BY, HAVING
-- 使用火車站進出人數
-- stations,gate_count
+
+
+### GROUP BY 說明
+GROUP BY 子句用於將查詢結果按照指定的欄位進行分組，通常與聚合函數（如 SUM、COUNT、AVG、MAX、MIN）一起使用。
+
+**基本語法：**
+```sql
+SELECT 欄位1, 聚合函數(欄位2)
+FROM 表格名稱
+GROUP BY 欄位1
+```
+
+### HAVING 說明
+HAVING 子句用於對分組後的結果進行篩選，類似於 WHERE 子句，但 HAVING 是針對分組後的聚合結果進行條件篩選。
+
+**基本語法：**
+```sql
+SELECT 欄位1, 聚合函數(欄位2)
+FROM 表格名稱
+GROUP BY 欄位1
+HAVING 聚合函數(欄位2) > 某個值
+```
+
+### 注意事項
+1. **WHERE vs HAVING**：
+   - WHERE：在分組前篩選資料
+   - HAVING：在分組後篩選聚合結果
+
+2. **SELECT 欄位限制**：
+   - 使用 GROUP BY 時，SELECT 中只能包含：
+     - GROUP BY 中指定的欄位
+     - 聚合函數的結果
+
+3. **執行順序**：
+   ```
+   FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY
+   ```
+
+4. **聚合函數在 HAVING 中的使用**：
+   - HAVING 中可以使用聚合函數進行條件判斷
+   - 不能在 WHERE 中使用聚合函數
+
+5. **效能考量**：
+   - 盡量使用 WHERE 進行初步篩選，減少需要分組的資料量
+   - HAVING 用於對分組結果的最終篩選
 
 ### JOIN
+
+- 使用火車站進出人數
+- stations,gate_count
 
 ```sql
 SELECT *
