@@ -125,6 +125,13 @@ password->使用者密碼
 
 ## 🚀 實際案例
 
+### 利用引導教學方式
+
+**CLI介面專案**
+[專案3](./tutorial_container/範例/3引導式的CLI專案)
+
 ### 實際案例(教學範例container資料夾內有.devcontainer)
 - [大盤股市_streamlit](./tutorial_container/範例/1stock_market)
 - [台北市youbike_streamlit](./tutorial_container/範例/2taipei_youbike)
+
+
