@@ -17,6 +17,8 @@ WHERE column1 operator (SELECT column1 FROM table2 WHERE condition);
 2. **多值子查詢**：返回多個值（需要使用 IN、ANY、ALL 等運算符）
 3. **相關子查詢**：內部查詢依賴於外部查詢的資料
 
+---
+
 ### 實際範例解析
 
 #### 1. 進站人數最多的一筆
