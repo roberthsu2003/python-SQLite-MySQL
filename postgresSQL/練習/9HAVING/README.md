@@ -45,7 +45,13 @@ HAVING 聚合函數(欄位2) > 某個值
    - 盡量使用 WHERE 進行初步篩選，減少需要分組的資料量
    - HAVING 用於對分組結果的最終篩選
 
-### JOIN
+> [!TIP]
+> [簡單範例說明-HAVING](../../上課用sql/HAVING.md)  
+> [簡單範例說明-GROUP BY](../../上課用sql/GROUP_BY.md)  
+
+---
+
+### JOIN,GROUP BY, HAVING
 
 - 使用火車站進出人數
 - stations,gate_count
