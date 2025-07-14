@@ -94,7 +94,9 @@ password->使用者密碼
 
 ## 📂 使用範例資料庫
 
-### 使用範例資料庫(dvd_rental_database)
+### 使用範例資料庫
+**(使用dvd_rental_database資料庫)**
+
 - [範例資料庫下載](./範例資料庫/dvd_rental_database/dvdrental.zip)
 - [CREATE TABLE 練習](./練習/1CREATE_TABLE)
 - [INSERT INTO VALUES 練習](./練習/5INSERT_INTO)
@@ -102,6 +104,9 @@ password->使用者密碼
 - [SELECT DISTINCT 練習](./練習/3SELECT_DISTINCT)
 - [WHERE 練習](./練習/6WHERE)
 - [ORDER BY 練習](./練習/4ORDER_BY)
+
+**(使用台鐵車站進出站人數資料庫)**
+
 - [FOREIGN KEY 練習](./練習/7Foreign_key)
 - [JOIN 練習](./練習/8JOIN)
 - [GROUP BY,HAVING練習](./練習/9HAVING)
