@@ -129,7 +129,11 @@ password->使用者密碼
 
 **CLI介面專案** 
 
-[函式框架先行方式](./tutorial_container/範例/3引導式的CLI專案)
+[函式框架先行學習方式](./tutorial_container/範例/3引導式的CLI專案)
+
+### 實際案例(台鐵車站進出站範例)
+
+- [台鐵車站進出站範例_CLI介面](./tutorial_container/範例/4台鐵車站進出站範例)
 
 ### 實際案例(教學範例container資料夾內有.devcontainer)
 - [大盤股市_streamlit](./tutorial_container/範例/1stock_market)
