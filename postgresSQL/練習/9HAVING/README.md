@@ -2,7 +2,7 @@
 
 
 ### GROUP BY 說明
-GROUP BY 子句用於將查詢結果按照指定的欄位進行分組，通常與聚合函數（如 SUM、COUNT、AVG、MAX、MIN）一起使用。
+GROUP BY 子句用於將查詢結果按照指定的欄位進行分組，通常與'聚合函數'（如 SUM、COUNT、AVG、MAX、MIN）一起使用。
 
 **基本語法：**
 ```sql
@@ -12,7 +12,7 @@ GROUP BY 欄位1
 ```
 
 ### HAVING 說明
-HAVING 子句用於對分組後的結果進行篩選，類似於 WHERE 子句，但 HAVING 是針對分組後的聚合結果進行條件篩選。
+HAVING 子句用於對分組後的結果進行篩選，類似於 WHERE 子句，但 HAVING 是針對分組後的'聚合結果'進行條件篩選。
 
 **基本語法：**
 ```sql
