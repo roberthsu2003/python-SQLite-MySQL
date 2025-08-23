@@ -15,6 +15,44 @@ WHERE column1 operator (SELECT column1 FROM table2 WHERE condition);
 
 1. **單值子查詢**：返回單一值（如 MAX、MIN、COUNT 等）
 2. **多值子查詢**：返回多個值（需要使用 IN、ANY、ALL 等運算符）
+
+#### 多值子查詢運算符詳解
+
+**IN 運算符：**
+- 用於檢查值是否在子查詢結果集中
+- 語法：`WHERE column IN (subquery)`
+- 範例：
+```sql
+SELECT * FROM employees 
+WHERE department_id IN (SELECT id FROM departments WHERE location = '台北');
+```
+
+**ANY 運算符：**
+- 用於比較值與子查詢結果集中的任何一個值
+- 語法：`WHERE column operator ANY (subquery)`
+- 支援的比較運算符：`=`, `>`, `<`, `>=`, `<=`, `<>`
+- 範例：
+```sql
+SELECT * FROM products 
+WHERE price > ANY (SELECT price FROM products WHERE category = '電子產品');
+```
+
+**ALL 運算符：**
+- 用於比較值與子查詢結果集中的所有值
+- 語法：`WHERE column operator ALL (subquery)`
+- 支援的比較運算符：`=`, `>`, `<`, `>=`, `<=`, `<>`
+- 範例：
+```sql
+SELECT * FROM employees 
+WHERE salary > ALL (SELECT salary FROM employees WHERE department = '行銷部');
+```
+
+**運算符比較表：**
+| 運算符 | 說明 | 使用場景 |
+|--------|------|----------|
+| IN | 值在結果集中 | 檢查多個可能值 |
+| ANY | 值與結果集中任一值比較 | 範圍比較（如大於某個範圍的最小值） |
+| ALL | 值與結果集中所有值比較 | 極值比較（如大於所有值） |
 3. **相關子查詢**：內部查詢依賴於外部查詢的資料
 
 > [!TIP]
