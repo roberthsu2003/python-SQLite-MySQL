@@ -10,7 +10,7 @@
 - [Psycopg Python 套件](#psycopg-python套件)
 - [實際案例](#實際案例)
 
-## 🖥 PostgreSQL Server 安裝
+## PostgreSQL Server 安裝
 
 ### 官方資源
 - [PostgreSQL 官網](https://postgresql.org)
@@ -34,11 +34,14 @@ docker run --name my-postgres -e POSTGRES_PASSWORD=yourpassword -p 5432:5432 -d 
 - `-d postgres`: 背景執行並使用 postgres 映像檔
 - **預設使用者帳號**: postgres
 
-## 🛠️ 安裝管理套件
+## 安裝管理套件
 
 ### 推薦工具
 - [pgAdmin 官網下載](https://www.pgadmin.org) - PostgreSQL 官方管理工具
 - [DBeaver 官網下載](https://dbeaver.io/) - 通用資料庫管理工具
+
+### MCP Server
+
 
 ### DBeaver 連線設定
 DBeaver 使用 JDBC 連線，設定方法如下：
@@ -49,16 +52,16 @@ username->使用者名稱
 password->使用者密碼	
 ```
 
-## 📄 文件參考
+## 文件參考
 - [postgresql官方說明](https://www.postgresql.org/docs/current/)
 - [postgresql-tutorial](https://neon.com/postgresql/tutorial)
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
 
-## 📂 範例資料庫
+## 範例資料庫
 
 ### [範例資料庫下載](./範例資料庫)
 
-## 📋 PostgreSQL SQL 語法
+## PostgreSQL SQL 語法
 
 ### PostgreSQL SQL語法(上課用)
 - [DDL語法（資料定義語言)](./上課用sql/DDL(定義資料語言).md)
@@ -92,7 +95,7 @@ password->使用者密碼
 	- [子查詢subQuery](./上課用sql/14子查詢.sql)
 	- [on delete action](./上課用sql/15on_delete_action.sql) 
 
-## 📂 使用範例資料庫
+## 使用範例資料庫
 
 ### 練習範例資料庫
 **(以下使用dvd_rental_database資料庫)**
@@ -112,7 +115,7 @@ password->使用者密碼
 - [GROUP BY,HAVING練習](./練習/9HAVING)
 - [SubQuery的練習](./練習/10subQuery)
 
-## 🐍 Psycopg Python 套件
+## Psycopg Python 套件
 
 ### Psycopg python套件
 - [psycopg2-python連結官方說明](https://www.psycopg.org/docs/)
@@ -123,7 +126,7 @@ password->使用者密碼
 - [SQL資料類型對應至python的資料類型](./python/type)
 - [psycopg的Exceptions](./python/exception)
 
-## 🚀 實際案例
+## 實際案例
 
 ### 利用引導教學方式
 
