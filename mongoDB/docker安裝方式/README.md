@@ -40,6 +40,56 @@ networks:
   mongodb_network:
     driver: bridge
 ```
+> **說明：**
+>
+> 上述 `docker-compose.yml` 檔案用於快速建立一個 MongoDB 服務，並具備以下特點：
+>
+> - **version: '3.8'**  
+>   指定 Docker Compose 的版本。
+>
+> - **services**  
+>   定義所有要啟動的服務，這裡只有一個 `mongodb` 服務。
+>
+>   - **image: mongo:latest**  
+>     使用官方最新版的 MongoDB 映像檔。
+>
+>   - **container_name: mongodb_container**  
+>     指定容器名稱，方便管理。
+>
+>   - **restart: always**  
+>     當容器異常停止時自動重啟。
+>
+>   - **ports**  
+>     對外開放 27017 埠，讓主機可以連接到容器內的 MongoDB。
+>
+>   - **environment**  
+>     設定環境變數，包含：
+>     - `MONGO_INITDB_ROOT_USERNAME`：設定 root 帳號名稱（如 admin）
+>     - `MONGO_INITDB_ROOT_PASSWORD`：設定 root 密碼
+>     - `MONGO_INITDB_DATABASE`：預設建立的資料庫名稱
+>
+>   - **volumes**  
+>     - `mongodb_data:/data/db`：將資料持久化到本地，避免資料因容器刪除而遺失。
+>     - `./init-scripts:/docker-entrypoint-initdb.d`：可放置初始化腳本（如建立預設資料表或帳號）。
+>
+>   - **networks**  
+>     指定網路，方便與其他服務（如 web 應用）互通。
+>
+> - **volumes**  
+>   定義資料卷，確保 MongoDB 資料持久化。
+>
+> - **networks**  
+>   定義自訂網路，讓多個服務可以在同一網路下溝通。
+>
+> ---
+>
+> **使用方式簡述：**
+>
+> 1. 將上述內容存成 `docker-compose.yml` 檔案。
+> 2. 在同一目錄下（可選）建立 `init-scripts` 資料夾，放置初始化腳本。
+> 3. 執行 `docker-compose up -d` 啟動 MongoDB 服務。
+> 4. 可用 `docker-compose down` 停止並移除服務。
+>
 
 ### 2. 創建初始化腳本（可選）
 
