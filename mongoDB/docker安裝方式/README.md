@@ -1,5 +1,7 @@
 # 使用Docker安裝MongoDB方式
 
+> 樹莓派要用4.4.18版才可以使用
+
 ## 目錄
 - [方法一：使用Docker Compose（推薦）](#方法一使用docker-compose推薦)
 - [方法二：使用Docker命令直接運行](#方法二使用docker命令直接運行)
@@ -11,6 +13,8 @@
 
 ## 方法一：使用Docker Compose（推薦）
 
+> raspberry pi4 只可以安裝4.4.18版
+
 ### 1. 創建docker-compose.yml文件
 
 ```yaml
@@ -18,7 +22,7 @@ version: '3.8'
 
 services:
   mongodb:
-    image: mongo:latest
+    image: mongo:4.4.18
     container_name: mongodb_container
     restart: always
     ports:
