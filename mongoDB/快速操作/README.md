@@ -32,7 +32,13 @@ pip install python-dotenv==0.13.0
 
 ### 取得使用者連線URI
 - 設定至.env內
-- 
+
+```
+#.env內的設定
+
+client = MongoClient("mongodb://username:password@localhost:27017/mydatabase?authSource=admin")
+```
+
 ### 測試是否連線成功
 - 顯示目前所有的可使用的資料庫(database)
 - sample_mflix是可內建導入的資料庫
